@@ -1,0 +1,403 @@
+@import "_basic.scss";
+$primary: #FF9900;
+$primary-light:#f8ad3c;
+$primary-dark:#D88100;
+$secondary: #383838;
+$secondary-light:#575757;
+$secondary-dark:#2d2d2d;
+$gradient-primary: linear-gradient(180deg, #000000 0%, #575757 100%);
+@include newFont("Kanit", "Kanit-Regular.ttf");
+//@include newFont("Kanit-Medium", "Kanit-Medium.ttf");
+@include newFont("Kanit-Bold", "Kanit-Bold.ttf");
+//@include newFont("Poppins-Medium", "Poppins-Medium.ttf");
+@include newFont("Poppins-Semibold", "Poppins-Semibold.ttf");
+@include newFont("Poppins-Bold", "Poppins-Bold.ttf");
+
+$text-small: 0.7em;
+$text-medium: 1.2em;
+$text-large: 1.3em;
+$hero-height: 100vh;
+$min-height-hero: 690px;
+@mixin hover_btn{
+  transition: transform 0.3s ease-in-out;
+ 
+  &:hover{
+    border:solid 0.5px #ffffff;
+    transform: scale(1.1);
+  }
+}
+@mixin hover_a{
+  transition: color 0.15s linear;
+  &:hover{
+    color: $primary;
+  }
+}
+@mixin hover_btn_small{
+  transition: transform 0.3s linear;
+  &:hover{
+    transform: scale(0.9);
+  }
+}
+
+
+
+.input-primary{
+  background-color: white;
+  padding: 10px;
+  border:none;
+  outline-color: $primary;
+  @include font("Kanit-Medium", 1em);
+}
+
+.playBtn{
+  /* Polygon 1 */
+    transition:transform .2s ease-in-out;
+    &:hover{
+      transform: scale(0.9);
+    }
+  position: absolute;
+  width: 60px;
+  height: 70px;
+  background-image: url("../play.png");
+  background-size: cover;
+  background-position: center;  
+  border:none;
+  outline:none;
+  background-color:transparent;
+  z-index: 4;
+
+}
+.video-background{
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: $hero-height;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-50%);
+  filter: brightness(70%) contrast(84%);
+  object-fit: cover;
+  object-position: 80% 20%;
+  z-index: -1;
+
+}
+.my-section{
+  font-size: 25px;
+  min-width: 280px;
+}
+@include tablets{
+  .my-section{
+    font-size: 23.5px;
+  }
+}
+@include phonexs{
+  .my-section{
+    font-size: 22px;
+  }
+}
+
+@mixin title{
+    @include font("Poppins-Bold", $text-large);
+    color: $secondary;
+    padding-bottom: 30px;
+    @include phones{
+      text-align: center;
+    }
+}
+@mixin title-section{
+    @include font("Kanit-Bold", $text-medium, 900);
+    color: $primary;
+    padding-bottom: 5px;
+    @include phones{
+      text-align: center;
+    }
+}
+@mixin paragraph{
+    @include font("Kanit", $text-small, 400);
+    color: #575757;
+    line-height: 1.4em;
+    @include phones{
+      text-align: center;
+    }
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+.bg-primary-light {
+  background-color: $primary-light !important;
+}
+.bg-primary-dark {
+  background-color: $primary-dark !important;
+}
+.bg-secondary {
+  background-color: $secondary !important;
+}
+.color-primary {
+  color: $primary !important;
+}
+.color-primary-light {
+  color: $primary-light !important;
+}
+.color-primary-dark {
+  color: $primary-dark !important;
+}
+.color-secondary {
+  color: $secondary !important;
+}
+.color-secondary-light {
+  color: $secondary-light !important;
+}
+.color-secondary-dark {
+  color: $secondary-dark !important;
+}
+.bg-footer {
+    background: linear-gradient(89.71deg, #383838 23.22%, #575757 92.95%);
+}
+.btn-primary {
+  background-color: $primary !important;
+  box-sizing: border-box; 
+  border: 0.5px white solid;
+  @include font("Kanit-Regular", $text-small, 900);
+  position:relative;
+  padding:5px 17px;
+  @include flex(center);
+  color: white;
+  outline: none;
+  height: 3.5em;
+  cursor:pointer;
+  width: 254px;
+  @include phones{
+    width: 204px;
+  }
+}
+.btn-primary::after{
+  content: "";
+  align-self: center;
+  position: absolute; 
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background-color: transparent;
+  border: 0.5px white solid;
+  top:calc( 50% - (100% - 6px)/2 );
+  left:calc( 50% - (100% - 6px)/2 );
+}
+
+.btn-primary-small {
+  background-color: $primary !important;
+  box-sizing: border-box; 
+  border: 0.5px white solid;
+  @include font("Kanit-Regular", $text-medium);
+  position:relative;
+  padding:5px 17px;
+  @include flex(center);
+  color: white;
+  width: 52px !important;
+  height: 36px;
+  font-size: 25px;
+}
+.btn-primary-small::after{
+  content: "";
+  align-self: center;
+  position: absolute; 
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background-color: transparent;
+  border: 0.5px white solid;
+  top:calc( 50% - (100% - 4px)/2 );
+  left:calc( 50% - (100% - 4px)/2 );
+}
+body{
+  @include scrollbar("y",  $secondary, $secondary-dark, 8px, 0px, $primary);
+  overflow-y: hidden;
+}
+a{
+    text-decoration: none;
+    color: white;
+   @include hover_a();
+}
+
+a:hover{
+    text-decoration: none;
+    color: $primary;
+}
+ul{
+    list-style: none;
+}
+.quick-links{
+  list-style: none;
+}
+.quick-links li::before {
+    content: "";
+    background:$primary-dark;
+    display: inline-block;
+    font-size: 50px;
+    width: 11px;
+    height: 11px;
+    margin-right: 8px;
+}
+
+.title{
+    @include title;
+}
+.title-section{
+    @include title-section;
+}
+p{
+    @include paragraph;
+}
+.tag-banner{
+  background: $primary;
+  @include flex(center);
+  color: white;
+  @include font("Poppins-Bold", $text-small, 100);
+}
+.item-food{
+  border-radius: 0px;
+  border:none;
+  .name-plate{
+    @include font("Kanit", 00.6em, 900);
+    @include flex(center);
+    width: 80%;
+    color: black;
+    @include tablets{
+      font-size: 0.7em;
+    }
+  }
+  .card-footer{
+    background: transparent;
+    border: none !important;
+    .btn-primary-small{
+      width: 20%;
+
+    }
+  }
+}
+.banner-image{
+    background-color: $secondary;
+    position:relative;
+    @include flex(flex-start, nowrap, row, flex-start);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+;
+    &::after{
+        content: "";
+        align-self: center;
+        position: absolute; 
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        background-color: transparent;
+        border: 0.5px white solid;
+        //centrar
+        top:calc( 50% - (100% - 30px)/2 );
+        left:calc( 50% - (100% - 30px)/2 );
+        @include tablets{
+          width: calc(100% - 15px);
+          height: calc(100% - 15px);
+          top:calc( 50% - (100% - 15px)/2 );
+          left:calc( 50% - (100% - 15px)/2 );
+        }
+        @include phones{ 
+          justify-content: flex-start !important;
+        }
+    }
+    .tag-banner{
+        margin: 40px;
+        position: absolute;
+        width: auto;
+        height: 45px;
+        padding:20px 20px;
+        background: $primary;
+        @include flex(center);
+        color: white;
+        word-wrap: break-word;
+        text-align: center;
+        @include font("Poppins-Bold", $text-medium, 100);
+        @include tablets{
+          font-size: 0.9em;
+
+          margin: 20px;
+       }
+       @include phones{
+         height: 35px;
+         font-size: 0.6em;
+         padding: 5px;
+       }
+
+    }
+}
+.btn-primary{
+  @include hover_btn();
+}
+.btn-primary-small:hover{
+  @include hover_btn_small();
+}
+/* LOADER */
+
+.container-loader{
+  z-index: 1000;
+  @include flex(center);
+  background: rgb(202, 202, 202);
+}
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: $primary;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/* LOADER END */
