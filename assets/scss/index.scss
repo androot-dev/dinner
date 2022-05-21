@@ -118,7 +118,7 @@ $size-logo-footer-mobile: 200px;
             }
         }
         background: rgb(255, 255, 255);
-        height: 100%;
+        height: 101%;
         width: $bar-social-width;; 
         position: absolute;
         writing-mode: vertical-lr;
@@ -312,7 +312,16 @@ header{
 .best-sellers{
     padding-top: $section-separation;
     height: auto;
-   
+    .title-section{
+        @include line{
+            width: 50%;
+            left: -45%;
+            bottom: 0px;
+            @include phones{
+                width: 80%;
+            }
+        }
+    }
     .btn-primary{
         max-width: 254px;
         margin-top: $section-separation;
@@ -389,6 +398,19 @@ header{
 }
 .aboutUs{
     padding-top: $section-separation;
+
+    .title-section{
+        @include line{
+            bottom: 0;
+            left: -55%;
+            z-index: 5;
+            width: 50%;
+            @include phones{
+                left: -20%;
+            }
+        }
+    }
+
     .about-info{
         background: $gradient-primary;
         color: white;
@@ -477,6 +499,12 @@ header{
     padding-top: calc(#{$section-separation} + 50px);
     padding-bottom: $section-separation;  
     
+    .title-section{
+        @include flex(center, nowrap, row, flex-end);
+        @include line{
+            width: 200px;
+        }
+    }
     .btn-primary{
         margin-top: $section-separation;
     }
@@ -547,7 +575,16 @@ header{
 .testimonials{
     background-color: #C4C4C43D;
     padding-top: $section-separation;
-   
+   .title-section{
+        @include line{
+            width: 60%;
+            left: -45%;
+            bottom: 0px;
+            @include phones{
+                width: 80%;
+            }
+        }
+   }
 
     .btn-primary{
         margin-top: $section-separation;
@@ -745,6 +782,8 @@ footer {
     }
     footer a{
      word-break: break-all;
+     text-align: center;
+     max-width: 200px;
     }
     footer i{
       margin-right: 4px !important;

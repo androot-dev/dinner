@@ -18,8 +18,8 @@ $(document).ready(function() {
     var containerLoader = $('.container-loader');
     console.log(containerLoader);
     var loader = $('.loader');
-   
-    $(window).on("pageshow", function () {
+    
+    $(window).on("pageshow", function () {  
         if (loader) {
             $('.container-loader').fadeOut(300);
         }
