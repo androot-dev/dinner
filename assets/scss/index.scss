@@ -207,7 +207,7 @@ nav, ul{
         color:rgb(255, 255, 255);
         @include hover_btn;
         @include font("Kanit", 0.8em);
-        background-color: $primary-dark;
+        background-color: $primary-dark !important;
         margin-top: 15px;
         border: solid 1px rgb(255, 255, 255);
         height: 40px;
