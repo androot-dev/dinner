@@ -19,7 +19,7 @@ $text-large: 1.3em;
 $hero-height: 100vh;
 $min-height-hero: 690px;
 @mixin hover_btn{
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s linear;
  
   &:hover{
     border:solid 0.5px #ffffff;
@@ -27,18 +27,58 @@ $min-height-hero: 690px;
   }
 }
 @mixin hover_a{
-  transition: color 0.15s linear;
+ 
   &:hover{
+    transition: color 0.15s linear;
     color: $primary;
   }
 }
 @mixin hover_btn_small{
-  transition: transform 0.3s linear;
+  transition: transform 0.2s ease;
   &:hover{
     transform: scale(0.9);
   }
 }
-
+@mixin theme-btn{
+  background-color: $primary !important;
+  box-sizing: border-box; 
+  border: 0.5px white solid;
+  @include font("Kanit-Regular", $text-medium);
+  position:relative;
+  @include flex(center);
+  color: white;
+  
+  &::after{
+    content: "";
+    align-self: center;
+    position: absolute; 
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background-color: transparent;
+    border: 0.5px white solid;
+    top:calc( 50% - (100% - 4px)/2 );
+    left:calc( 50% - (100% - 4px)/2 );
+  
+}
+}
+.owl-carousel, .my-dots{
+        
+  position: relative;
+  .owl-dot span{
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 0 !important;
+    border: none;
+    outline: none;
+  }
+  .active > span{
+      @include theme-btn();
+      width: 15px !important;
+      height: 15px !important;
+      border-radius:0 !important;
+      transform: scale(1.1) !important;
+  }
+}
 
 
 .input-primary{
@@ -70,7 +110,7 @@ $min-height-hero: 690px;
 }
 .video-background{
   width: 100vw;
-  height: auto;
+  height: 100%;
   position: absolute;
   min-width: 100%;
   min-height: 100%;
@@ -219,7 +259,7 @@ body{
 a{
     text-decoration: none;
     color: white;
-   @include hover_a();
+   
 }
 
 a:hover{

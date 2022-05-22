@@ -1,0 +1,31 @@
+$subhero-height: 50vh;
+
+.hero{
+    height: $subhero-height;
+    .video-background{
+        min-height: 600px;
+    }
+    .hero-action{
+        width: 100%;
+
+        h1{
+           
+            text-align: center;
+        }
+    }
+}
+
+.contactUs{
+    height: auto;
+    .map{
+        height: 550px;
+        background:pink;
+        .load-map{
+            z-index: 1;;
+        }
+        iframe{
+            z-index: 2;
+            
+        }
+    }
+}

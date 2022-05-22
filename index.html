@@ -17,6 +17,21 @@
       </head>
     <body>
       <!--HEADER-->
+      <div class="modal-menu my-section">
+        <button class="closeMenu bg-danger text-white">
+          <i class="bx bx-x"></i>
+        </button>
+       
+        <nav>
+          <ul>
+            <li><a class="logo-ref" href="/"> <div class="my-logo-mobile-menu"> </div> </a></li>
+            <li><a class="btn-primary" href="/about.html">About Us</a></li>
+            <li><a class="btn-primary" href="/menu.html">Menu</a></li>
+            <li><a class="btn-primary" href="/faq.html">FAQ's</a></li>
+            <li><a class="btn-primary" href="/contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
       <header class="my-section ">
         <div class="topheader  position-fixed">
           <a href="/"><div class="logo-top"></div></a>
@@ -24,10 +39,10 @@
           
           <nav >
             <ul class="text-menu tablets-hide">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#menu">Menu</a></li>
-              <li><a href="#faq">FAQ's</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href="/about.html">About Us</a></li>
+              <li><a href="/menu.html">Menu</a></li>
+              <li><a href="/faq.html">FAQ's</a></li>
+              <li><a href="/contact.html">Contact Us</a></li>
             </ul>
             <ul class="icon-menu ">
               <li class="phone-menu"><i class="bx bx-menu"></i></li>
@@ -40,6 +55,7 @@
 
             </ul>
           </nav>
+          
         </div>
       </header>
 
@@ -62,11 +78,11 @@
         <div class="social-bar">
           <h2 class="large-text">DELICIOUS FOOD</h2>
           <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Youtube</a></li>
-            <li><a href="#">Linkedin</a></li>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.twitter.com">Twitter</a></li>
+            <li><a href="https://www.instagram.com">Instagram</a></li>
+            <li><a href="https://www.youtube.com">Youtube</a></li>
+            <li><a href="https://www.linkedin.com">Linkedin</a></li>
           </ul>
         </div>
       </section>
@@ -84,7 +100,7 @@
               <a class="btn-primary d-none d-md-flex">MAKE A ORDER</a>
             </div>
             <div class="col-12 col-md-6 d-flex justify-content-md-end justify-content-center  align-items-center col-carousel">
-              <div class="owl-carousel pr-2 justify-content-md-around justify-content-center d-flex">
+              <div class="owl-carousel owl-theme justify-content-md-around justify-content-center d-flex">
                 <div class="item-food card position-relative">
                   <img class="card-img-top" src="assets/PRODUCTO 1.jpg" alt="Food">
                   <div class="tag-price">50$</div>
@@ -119,7 +135,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 d-flex d-md-none justify-content-center">
+            <div class="col-12 d-flex d-md-none justify-content-center mt-4">
               <a class="btn-primary">MAKE A ORDER</a>
             </div>
           </div>
@@ -163,7 +179,7 @@
           <h1 class="title-section text-center px-4 w-100">Menu</h1>
           <h2 class="title px-5">Meet all our dishes</h2>
         </div>
-        <div class="menu-grid">
+        <div class="menu-grid col-12">
             <div class="soup banner-image ">
               <img src="assets/CATEGORIA 1.jpg"> 
               <div class="tag-banner w-50">Soup</div>
@@ -211,17 +227,27 @@
               <a class="btn-primary">VIEW MORE</a>
             </div>
           </div>
-          <div class="col-12 col-md-6 d-flex align-items-center">
-            <div class="owl-carousel owl-theme">
 
-              <div class="item-test">
-                <div class="video-container position-relative">
-                  <div class="name">Jonh Smith</div>
-                  <video class="video-testimonial"  src="assets/person_3.mp4"></video>
-                  <button class="playBtn position-absolute"></button>
+          <div class="col-12 col-md-6 d-flex align-items-center justify-content-md-end justify-content-center">
+            <div class="grid-carousel">      
+              <div class="owl-carousel owl-theme">
+                <div class="item-test">
+                  <div class="video-container position-relative">
+                    <div class="name">Maria Smith</div>
+                    <video class="video-testimonial"  src="assets/review-1.mp4"></video>
+                      <button class="playBtn"></button>
+                  </div>
                 </div>
-              </div>
+                <div class="item-test">
+                  <div class="video-container position-relative">
+                    <div class="name">Anna Maria</div> 
+                      <video class="video-testimonial"  src="assets/review-2.mp4"></video>
+                      <button class="playBtn"></button>
+                  </div>
+                </div>
 
+              </div>
+              
             </div>
           </div>
           
@@ -354,15 +380,24 @@
         $(document).ready(function(){
          
       
+          
+          let playButtons = document.querySelectorAll(".playBtn");
+          playButtons.forEach(element => {
+            let videoElem = element.parentNode.querySelector(".video-testimonial");
+            
+            element.addEventListener("click", ()=>{
+              handlePlayButton(element, videoElem);
+            }, false);
+            videoElem.onended = ()=>{
+              element.style.display = "block";
+              videoElem.controls = false;
+              $(".testimonials .owl-carousel").trigger('next.owl.carousel');
+            }
+            playVideo(element, videoElem);
+          });
+          
 
-          let videoElem = document.querySelector(".video-testimonial");
-          let playButton = document.querySelector(".playBtn");
-
-          playButton.addEventListener("click", handlePlayButton, false);
-        
-          playVideo();
-
-          async function playVideo() {
+          async function playVideo(playButton, videoElem) {
             try {
               await videoElem.play();  
               playButton.style.display = "none";      
@@ -373,26 +408,27 @@
             
           }
 
-          function handlePlayButton() {
+          function handlePlayButton(playButton, videoElem) {
+           
             videoElem.controls = true;
             if (videoElem.paused) {
-              playVideo();
+              playVideo(playButton, videoElem);
             }else{
               videoElem.pause();
+              console.log(playButton)
               playButton.style.display = "block";
             }
           }
+
 
           $('.best-sellers .owl-carousel').owlCarousel({
               loop:true,
               nav:false,
               margin: 50,
-              dots: false,
               items: 2,
               autoplay: true,
               autoplayTimeout: 3000,
               autoplayHoverPause: true,
-
               responsive:{
                 0:{
                   items:1
@@ -411,12 +447,8 @@
             $('.testimonials .owl-carousel').owlCarousel({
               loop: false,
               items:1,
-              autoplay: true,
-              autoplayTimeout: 3000,
-              autoplayHoverPause: true,
-              margin: 500,
-              center: true,
-              autoWidth: true
+              margin:50
+             
             })
 
         })
