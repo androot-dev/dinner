@@ -1,4 +1,5 @@
 $subhero-height: 50vh;
+$section-separation: 50px;
 @import "global.scss";
 .hero{
     height: $subhero-height;
@@ -47,4 +48,70 @@ $subhero-height: 50vh;
         }
     }
 }
+.about-us{
+    padding:$section-separation 10%;
+    height: auto; 
 
+    @include phones{
+        padding: $section-separation 5%;
+
+      
+    }
+    .title-section{
+        @include flex(center);
+        @include line{
+            width: 40%;
+            top: 90px;
+            right: 0%;
+            @include tablets{
+                width: 200px;
+                left: auto !important;
+            }
+        }
+  
+    }
+}
+.overlay-med-left{
+    position: relative;
+    &::after{
+        height: 100%;
+        width: 25%;
+        background-color: $primary;
+        opacity: 0.1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 200px;
+        min-width: 60px;
+        z-index: -2;
+    }
+    &::before{
+        height: 100%;
+        width: 14%;
+        background-color: $primary;
+        opacity: 0.1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 130px;
+        min-width: 50px;
+        z-index: -2;
+    }
+    
+}
+.overlay-med-right{
+    &::after{
+        height: 100%;
+        width: 30%;
+        background-color: $primary;
+        opacity: 0.3;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 150px;
+        z-index: -2;
+    }
+}
