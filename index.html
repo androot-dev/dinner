@@ -217,16 +217,10 @@
               <div class="item-test">
                 <div class="video-container position-relative">
                   <div class="name">Jonh Smith</div>
-                  <div class="item-video" data-merge="3">
-                    <a class="owl-video" href="assets/person_3.mp4"></a>
-                  </div>
+                  <video class="video-testimonial"  src="assets/person_3.mp4"></video>
+                  <button class="playBtn position-absolute"></button>
                 </div>
               </div>
-
-
-             
-
-    
 
             </div>
           </div>
@@ -415,12 +409,14 @@
               }
           })
             $('.testimonials .owl-carousel').owlCarousel({
+              loop: false,
               items:1,
-              merge:true,
-              loop:true,
-              margin:10,
-              lazyLoad:true,
-              center:true
+              autoplay: true,
+              autoplayTimeout: 3000,
+              autoplayHoverPause: true,
+              margin: 500,
+              center: true,
+              autoWidth: true
             })
 
         })
