@@ -11,6 +11,7 @@
         <title>DINNER</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
         <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="/assets/css/index.css">
       </head>
@@ -163,18 +164,26 @@
           <h2 class="title px-5">Meet all our dishes</h2>
         </div>
         <div class="menu-grid">
-          <div class="soup banner-image">
-            <img src="assets/CATEGORIA 1.jpg"> 
-            <div class="tag-banner w-50">Soup</div>
-          </div>
-          <div class="hors banner-image justify-content-end">
-            <img src="assets/CATEGORIA 2.jpg" />
-            <div class="tag-banner">hors d'oeuvres</div>
-          </div>
+            <div class="soup banner-image ">
+              <img src="assets/CATEGORIA 1.jpg"> 
+              <div class="tag-banner w-50">Soup</div>
+            </div>
+                
+            <div class="hors banner-image justify-content-end">
+                <img src="assets/CATEGORIA 2.jpg" />
+              <div class="tag-banner">hors d'oeuvres</div>
+            </div>
+
+            <div class="desserts banner-image justify-content-center align-items-end">
+              <img src="assets/CATEGORIA 5.jpg" />
+              <div class="tag-banner">Desserts</div>
+            </div>
+                
           <div class="desserts banner-image justify-content-center align-items-end">
             <img src="assets/CATEGORIA 5.jpg" />
             <div class="tag-banner">Desserts</div>
           </div>
+
           <div class="fittings banner-image  align-items-end" >
             <img src="assets/CATEGORIA 3.jpg" />
             <div class="tag-banner">Fittings</div> 
@@ -203,15 +212,22 @@
             </div>
           </div>
           <div class="col-12 col-md-6 d-flex align-items-center">
-            <div class="owl-carousel">
+            <div class="owl-carousel owl-theme">
+
               <div class="item-test">
-              
                 <div class="video-container position-relative">
                   <div class="name">Jonh Smith</div>
-                  <video class="video-testimonial"  src="assets/person_3.mp4"></video>
-                  <button class="playBtn position-absolute"></button>
+                  <div class="item-video" data-merge="3">
+                    <a class="owl-video" href="assets/person_3.mp4"></a>
+                  </div>
                 </div>
               </div>
+
+
+             
+
+    
+
             </div>
           </div>
           
@@ -343,7 +359,7 @@
       <script>
         $(document).ready(function(){
          
-       
+      
 
           let videoElem = document.querySelector(".video-testimonial");
           let playButton = document.querySelector(".playBtn");
@@ -357,7 +373,7 @@
               await videoElem.play();  
               playButton.style.display = "none";      
             } catch(err) {
-              console.log(err);
+             
               playButton.style.display = "block";    
             }
             
@@ -372,6 +388,7 @@
               playButton.style.display = "block";
             }
           }
+
           $('.best-sellers .owl-carousel').owlCarousel({
               loop:true,
               nav:false,
@@ -398,14 +415,12 @@
               }
           })
             $('.testimonials .owl-carousel').owlCarousel({
-              loop: false,
               items:1,
-              autoplay: true,
-              autoplayTimeout: 3000,
-              autoplayHoverPause: true,
-              margin: 500,
-              center: true,
-              autoWidth: true
+              merge:true,
+              loop:true,
+              margin:10,
+              lazyLoad:true,
+              center:true
             })
 
         })

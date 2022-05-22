@@ -352,6 +352,14 @@ header{
             padding-right: 8% !important;
             padding-left: 8% !important;
         }
+        .btn-primary-small{
+            color: white !important;
+            margin-right: 1px;
+            pointer-events: none;
+            i{
+                pointer-events: all;
+            }
+        }
     }
     @include tablets{
         .col-text{
@@ -386,11 +394,7 @@ header{
         .col-text{
             padding-left: 40px;
             min-width: 250px;
-        }
-        .col-carousel{
-           // padding-right: 1% !important;
-        }
-     
+        }  
     }
     
     
@@ -496,9 +500,12 @@ header{
 }
 .menu-food{
     height: auto;
+    
     padding-top: calc(#{$section-separation} + 50px);
     padding-bottom: $section-separation;  
-    
+    @media screen and (max-width: 940px){
+        padding-top: $section-separation ;
+    }
     .title-section{
         @include flex(center, nowrap, row, flex-end);
         @include line{
