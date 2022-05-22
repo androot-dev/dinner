@@ -1,5 +1,5 @@
 $subhero-height: 50vh;
-
+@import "global.scss";
 .hero{
     height: $subhero-height;
     .video-background{
@@ -17,15 +17,34 @@ $subhero-height: 50vh;
 
 .contactUs{
     height: auto;
+
     .map{
         height: 550px;
-        background:pink;
         .load-map{
             z-index: 1;;
         }
         iframe{
             z-index: 2;
-            
+                
+        }
+    }
+    .title-section{
+        @include flex(center);
+        @include line{
+            width: 40%;
+            bottom: 25px;
+        }
+    }
+    .contact-form{  
+        form{
+            input, select, textarea{
+                @include font("Kanit", $text-small);    
+                @include bg-light;
+            }
+            .btn-primary{
+                height: 60px;
+            }
         }
     }
 }
+
