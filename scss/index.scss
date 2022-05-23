@@ -11,7 +11,6 @@ $menu-icon-width-phonexs: calc(#{$yellow-gradient-width-phonexs} - #{$bar-social
 $section-separation: 50px;
 $size-logo-footer: 200px;
 $size-logo-footer-mobile: 200px;
-
 .hero{
     background-size: cover;
     background-position: right;
@@ -41,7 +40,6 @@ $size-logo-footer-mobile: 200px;
             padding-right: calc(#{$bar-social-width-phonexs} + 10px);
         }
         h1{
-
             @include font("Poppins-Bold", 1.8em);
             color: white;
             margin-bottom: 0;
@@ -551,6 +549,7 @@ header{
     
 
 }
+
 .menu-food{
     height: auto;
     
@@ -972,3 +971,4 @@ footer {
       height: $size-logo-footer-mobile;
     }
   }
+ 

@@ -10,7 +10,7 @@ $gradient-primary: linear-gradient(180deg, #000000 0%, #575757 100%);
 //@include newFont("Kanit-Medium", "Kanit-Medium.ttf");
 @include newFont("Kanit-Bold", "Kanit-Bold.ttf");
 //@include newFont("Poppins-Medium", "Poppins-Medium.ttf");
-@include newFont("Poppins-Semibold", "Poppins-Semibold.ttf");
+//@include newFont("Poppins-Semibold", "Poppins-Semibold.ttf");
 @include newFont("Poppins-Bold", "Poppins-Bold.ttf");
 
 $text-small: 0.7em;
@@ -24,13 +24,15 @@ $min-height-hero: 690px;
   &:hover{
     border:solid 0.5px #ffffff;
     transform: scale(1.1);
+    @content;
   }
 }
 @mixin hover_a{
  
   &:hover{
     transition: color 0.15s linear;
-    color: $primary;
+    color: $primary ;
+    @content;
   }
 }
 @mixin hover_btn_small{
@@ -61,6 +63,34 @@ $min-height-hero: 690px;
   
 }
 }
+.border-menu{
+
+  box-sizing: border-box; 
+  border: 0.5px $primary solid;
+  @include font("Kanit-Regular", $text-medium);
+  position:relative;
+  @include flex(center);
+  color:$secondary;
+  
+  &::after{
+    content: "";
+    align-self: center;
+    position: absolute; 
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background-color: transparent;
+    border: 0.5px $primary solid;
+    top:calc( 50% - (100% - 4px)/2 );
+    left:calc( 50% - (100% - 4px)/2 );
+}
+
+}
+.hover_a{
+  &:hover{
+    transition: color 0.15s linear;
+    color: $primary !important;
+  }
+}
 .owl-carousel, .my-dots{
         
   position: relative;
@@ -79,8 +109,6 @@ $min-height-hero: 690px;
       transform: scale(1.1) !important;
   }
 }
-
-
 .input-primary{
   background-color: white;
   padding: 10px;
@@ -88,7 +116,6 @@ $min-height-hero: 690px;
   outline-color: $primary;
   @include font("Kanit-Medium", 1em);
 }
-
 .playBtn{
   /* Polygon 1 */
   opacity: 0.8;
@@ -164,6 +191,7 @@ $min-height-hero: 690px;
       text-align: center;
     }
 }
+
 .text-primary{
   color: $primary;
   font-family: "Kanit";
@@ -253,7 +281,7 @@ $min-height-hero: 690px;
   color: $secondary-light !important;
 }
 .color-secondary-dark {
-  color: $secondary-dark !important;
+  color: $secondary-dark;
 }
 .bg-footer {
     background: linear-gradient(89.71deg, #383838 23.22%, #575757 92.95%);
@@ -452,7 +480,11 @@ p{
 }
 /* LOADER */
 
+.hover_btn{
+  @include hover_btn();
+}
 .container-loader{
+  transition: opacity 0.2s ease-in-out;
   z-index: 1000;
   position:fixed;
   width: 100%;
@@ -460,7 +492,7 @@ p{
   top:0;
   left: 0;
   @include flex(center);
-  background: rgb(214, 214, 214);
+  background: rgb(235, 235, 235);
 }
 .lds-ellipsis {
   display: inline-block;

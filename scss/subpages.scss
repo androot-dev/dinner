@@ -71,6 +71,23 @@ $section-separation: 50px;
   
     }
 }
+.menu-food-sub{
+    .title-section{
+        @include flex(center, nowrap, row, flex-end);
+        @include line{
+            width: 200px;
+        }
+    }
+    .card{
+        cursor: pointer !important;
+        .card-text{
+            font-size: 1em;
+        }
+        .card-title{
+            font-size: 1.2em;
+        }
+    }
+}
 .overlay-med-left{
     position: relative;
     &::after{
