@@ -10,7 +10,7 @@ $section-separation: 50px;
         width: 100%;
 
         h1{
-           
+           font-size: 1.4em !important;
             text-align: center;
         }
     }
@@ -78,6 +78,12 @@ $section-separation: 50px;
             width: 200px;
         }
     }
+    @include phones{
+        padding: 0 10%;
+    }
+    @include phonexs{
+        padding: 0 5%;
+    }
     .card{
         cursor: pointer !important;
         .card-text{
@@ -86,6 +92,15 @@ $section-separation: 50px;
         .card-title{
             font-size: 1.2em;
         }
+        @include phones{
+           
+            .card-img-top{
+                height: 250px !important;
+                object-fit: cover !important;
+            }
+        }
+        
+    
     }
 }
 .overlay-med-left{
