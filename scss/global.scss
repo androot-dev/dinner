@@ -14,13 +14,13 @@ $gradient-primary: linear-gradient(180deg, #000000 0%, #575757 100%);
 @include newFont("Poppins-Bold", "Poppins-Bold.ttf");
 
 $text-small: 0.7em;
+$text-normal: 0.9em;
 $text-medium: 1.2em;
 $text-large: 1.3em;
 $hero-height: 100vh;
 $min-height-hero: 690px;
 @mixin hover_btn{
   transition: transform 0.2s linear;
- 
   &:hover{
     border:solid 0.5px #ffffff;
     transform: scale(1.1);
@@ -115,6 +115,7 @@ $min-height-hero: 690px;
   border:none;
   outline-color: $primary;
   @include font("Kanit-Medium", 1em);
+  height: 45px;
 }
 .playBtn{
   /* Polygon 1 */
@@ -207,10 +208,20 @@ $min-height-hero: 690px;
   font-family: "Kanit";
   font-size: $text-small;
 }
+.text-primary-normal{
+  color: $primary;
+  font-family: "Kanit";
+  font-size: $text-normal;
+}
 .text-secondary-small{
   color: $secondary;
   font-family: "Poppins-Bold";
   font-size: $text-small;
+}
+.text-secondary-normal{
+  color: $secondary;
+  font-family: "Poppins-Bold";
+  font-size: $text-normal;
 }
 .text-primary-medium{
   color: $primary;
@@ -233,7 +244,7 @@ $min-height-hero: 690px;
   font-size: $text-large;
 }
 @include phones{
-  .text-primary, .text-secondary, .text-primary-small, .text-secondary-small, .text-primary-medium, .text-secondary-medium, .text-primary-large, .text-secondary-large{
+  .text-primary, .text-primary-normal, .text-secondary-normal, .text-secondary, .text-primary-small, .text-secondary-small, .text-primary-medium, .text-secondary-medium, .text-primary-large, .text-secondary-large{
     width: 100% !important;
     text-align: center !important;
     justify-content: center !important;
@@ -287,6 +298,17 @@ $min-height-hero: 690px;
     background: linear-gradient(89.71deg, #383838 23.22%, #575757 92.95%);
 }
 .btn-primary {
+  &:focus{
+    outline: none !important;
+    border: 0.5px white solid;
+    box-shadow: none !important;
+  }
+  &:active{
+    outline: none !important;
+    border: 0.5px white solid !important;
+    box-shadow: none !important;
+  }
+
   background-color: $primary !important;
   box-sizing: border-box; 
   border: 0.5px white solid;
@@ -298,7 +320,8 @@ $min-height-hero: 690px;
   outline: none;
   height: 3.5em;
   cursor:pointer;
-  width: 254px;
+  width: 204px;
+  height: 55px;
   @include phones{
     width: 204px;
   }
@@ -316,6 +339,16 @@ $min-height-hero: 690px;
 }
 
 .btn-primary-small {
+  &:focus{
+    outline: none !important;
+    border: 0.5px white solid;
+    box-shadow: none !important;
+  }
+  &:active{
+    outline: none !important;
+    border: 0.5px white solid !important;
+    box-shadow: none !important;
+  }
   background-color: $primary !important;
   box-sizing: border-box; 
   border: 0.5px white solid;

@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
         });
       })
 $(document).ready(function() {
-    let scrollNow = window.pageYOffset;
+    //let scrollNow = window.pageYOffset;
    
     $(window).on('scroll', function () {
         let scroll = $(window).scrollTop();
@@ -24,13 +24,14 @@ $(document).ready(function() {
         } else {
             $(".topheader").removeClass("topheader-with-background");
         }
+        /*
         if(scrollNow > scroll) {
             $(".topheader").css("transform", "translateY(0)");
         }else{
             $(".topheader").css("transform", "translateY(-100%)");
 
-        }
-        scrollNow = scroll;
+        }*/
+        //scrollNow = scroll;
     });
 
     $(".closeMenu").on("click", function () {

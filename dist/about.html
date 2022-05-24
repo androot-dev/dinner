@@ -1,299 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link rel="icon" href="favicon.ico"> 
-        <meta name="theme-color" content="#FF9900">
-        <title>DINNER</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assets/css/owl.carousel.css">
-        <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="./assets/css/index.css">
-        <link rel="stylesheet" href="./assets/css/subpages.css">
-      </head>
-    <body>
-      <!--HEADER-->
-      <div class="modal-menu my-section">
-        <button class="closeMenu bg-danger text-white">
-          <i class="bx bx-x"></i>
-        </button>
-       
-        <nav>
-          <ul>
-            <li><a class="logo-ref" href="./"> <div class="my-logo-mobile-menu"> </div> </a></li>
-            <li><a class="btn-primary" href="./about.html">About Us</a></li>
-            <li><a class="btn-primary" href="./menu.html">Menu</a></li>
-            <li><a class="btn-primary" href="./faq.html">FAQ's</a></li>
-            <li><a class="btn-primary" href="./contact.html">Contact Us</a></li>
-          </ul>
-        </nav>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <meta name="theme-color" content="#FF9900">
+  <title>DINNER</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/subpages.css">
+</head>
+
+<body>
+  <!--HEADER-->
+  <div class="modal-menu my-section">
+    <button class="closeMenu bg-danger text-white">
+      <i class="bx bx-x"></i>
+    </button>
+
+    <nav>
+      <ul>
+        <li><a role="button" class="logo-ref" href="./">
+            <div class="my-logo-mobile-menu"> </div>
+          </a></li>
+        <li><a role="button" class="btn-primary" href="./about.html">About Us</a></li>
+        <li><a role="button" class="btn-primary" href="./menu.html">Menu</a></li>
+        <li><a role="button" class="btn-primary" href="./faq.html">FAQ's</a></li>
+        <li><a role="button" class="btn-primary" href="./contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header class="my-section ">
+    <div class="topheader position-fixed">
+      <a href="./">
+        <div class="logo-top"></div>
+      </a>
+      <nav>
+        <ul class="text-menu d-none d-md-flex">
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./faq.html">FAQ's</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+        <ul class="icon-menu">
+          <li class="px-1 px-md-none d-block d-md-none phone-menu"><i class="bx bx-menu"></i></li>
+          <li class="d-none d-md-block"><a href="mailto:info@glamping.global"><i class="bx bxs-envelope"></i></a></li>
+          <li class="d-none d-md-block"><a target="_blank" href="https://www.google.com/maps/"><i
+                class="bx bxs-map"></i></a></li>
+          <li class="d-none d-md-block"><a href="tel:5555555"><i class="bx bxs-phone"></i></a></li>
+          <li class="line-menu"></li>
+          <li><a href="#"><i class='bx bx-search-alt'></i></a></li>
+          <li><a href="#"><i class="bx bx-cart"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!--LOADER-->
+  <div class="container-loader">
+    <div class="loader lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!--HERO-->
+  <section class="my-section hero ">
+    <video autoplay="autoplay" class="video-background" loop="loop" muted playsinline="playsinline"
+      src="assets/videoHero.mp4"></video>
+    <div class="hero-action">
+      <div class="text">
+        <h1 class="first-text">ABOUT US</h1>
       </div>
-      <header class="my-section ">
-        <div class="topheader  position-fixed">
-          <a href="./"><div class="logo-top"></div></a>
-          
-          
-          <nav >
-            <ul class="text-menu tablets-hide">
-              <li><a href="./about.html">About Us</a></li>
-              <li><a href="./menu.html">Menu</a></li>
-              <li><a href="./faq.html">FAQ's</a></li>
-              <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
-            <ul class="icon-menu ">
-              <li class="phone-menu"><i class="bx bx-menu"></i></li>
-              <li class="tablets-hide"><a href="mailto:info@glamping.global"><i class="bx bxs-envelope"></i></a></li>
-              <li class="tablets-hide"><a href="https://www.google.com/maps/"><i class="bx bxs-map"></i></a></li>
-              <li class="tablets-hide"><a href="tel:5555555"><i class="bx bxs-phone"></i></a></li>  
-              <li class="line-menu"></li> 
-              <li><a href="#"><i class='bx bx-search-alt'></i></a></li>
-              <li><a href="#"><i class="bx bx-cart"></i></a></li>
+    </div>
+    <div class="social-bar">
+      <h2 class="large-text">DELICIOUS FOOD</h2>
+      <ul>
+        <li><a target="_blank" href="https://www.facebook.com">Facebook</a></li>
+        <li><a target="_blank" href="https://www.twitter.com">Twitter</a></li>
+        <li><a target="_blank" href="https://www.instagram.com">Instagram</a></li>
+        <li><a target="_blank" href="https://www.youtube.com">Youtube</a></li>
+        <li><a target="_blank" href="https://www.linkedin.com">Linkedin</a></li>
+      </ul>
+    </div>
+  </section>
 
-            </ul>
-          </nav>
-          
+  <main>
+    <!--ABOUT-->
+    <section class=" my-section container-fluid position-relative about-us overlay-med-left">
+      <div class="row">
+        <div class="col-md-6 col-12  order-2 order-md-1 d-flex align-items-center justify-content-center ">
+          <div class="images-about-container">
+            <div class="images-about">
+              <img src="assets/food-3.jpg">
+            </div>
+            <div class="images-about">
+              <img src="assets/food-2.webp">
+            </div>
+          </div>
         </div>
-      </header>
-
-      <!--LOADER-->
-      <div class="container-loader">
-        <div class="loader lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        <div class="col-12 col-md-6 order-1 order-md-2 pl-4 ">
+          <h1 class="mx-0 title-section row justify-content-md-start">About Us</h1>
+          <h2 class="mx-0 title row justify-content-md-start justify-content-center">Our history</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex cum molestiae nam, autem
+            voluptatibus
+            perspiciatis repellat enim mollitia sint. Voluptas esse nam, alias sit cupiditate ex officia corrupti
+            temporibus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque soluta iusto fugit laudantium
+            atque magni eligendi blanditiis aliquam, voluptatum impedit inventore, sequi natus ratione vel asperiores,
+            qui voluptas nemo? Est.</p>
+          <div class="pt-5 d-none d-md-flex justify-content-end pr-5">
+            <a target="_blank" role="button" href="./contact.html" class="btn-primary">CONTACT US</a>
+          </div>
+        </div>
+        <div class="pt-5 order-3 m-0 w-100 d-flex d-md-none row justify-content-center">
+          <a target="_blank" role="button" href="./contact.html" class="btn-primary">CONTACT US</a>
+        </div>
       </div>
-      
-      <!--HERO-->
-      <section class="my-section hero ">
-        <video autoplay="autoplay" class="video-background" loop="loop" muted playsinline="playsinline" src="assets/videoHero.mp4"></video>
-        <div class="hero-action">
-          <div class="text">
-            <h1 class="first-text">ABOUT US</h1>
+    </section>
+    <!--TESTIMONIALS-->
+    <section class="testimonials my-section container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-6 m-0 p-0">
+          <h1 class="w-100 title-section">Testimonials</h1>
+          <h2 class="title">What do our customers say</h2>
+          <p>
+            For us it is very important to know the opinions of our clients, since they inspire us to do things better
+            every day. Give us your opinion about our services and let's improve together more and more
+          </p>
+          <div class="d-none d-md-flex justify-content-start">
+            <a target="_blank" href="https://business.google.com" class="btn-primary">VIEW MORE</a>
           </div>
         </div>
-        <div class="social-bar">
-            <h2 class="large-text">DELICIOUS FOOD</h2>
-            <ul>
-              <li><a  target="_blank" href="https://www.facebook.com">Facebook</a></li>
-              <li><a  target="_blank" href="https://www.twitter.com">Twitter</a></li>
-              <li><a target="_blank"  href="https://www.instagram.com">Instagram</a></li>
-              <li><a target="_blank"  href="https://www.youtube.com">Youtube</a></li>
-              <li><a  target="_blank" href="https://www.linkedin.com">Linkedin</a></li>
-            </ul>
-          </div>
-      </section>
 
-      <main>
-        <!--ABOUT-->
-        <section class=" my-section container-fluid position-relative about-us overlay-med-left">
-          <div class="row">
-            <div class="col-md-6 col-12 order-2 order-md-1 d-flex align-items-center">
-              <div class="images-about row align-items-center">
-                <div class="container-images col-6"><img class="img-thumbnail" src="assets/HERO.jpg"></div>
-                <div class="container-images col-6"><img class="img-thumbnail" src="assets/person_3.png" /></div>
-                <div class="container-images col-6"><img class="img-thumbnail" src="assets/PRODUCTO 1.jpg"></div>
-                <div class="container-images col-6"><img class="img-thumbnail" src="assets/CATEGORIA 2.jpg"></div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 order-1 order-md-2">
-              <h1 class="mx-0 title-section row justify-content-md-start">About Us</h1>
-              <h2 class="mx-0 title row justify-content-md-start justify-content-center">Our history</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex cum molestiae nam, autem voluptatibus perspiciatis repellat enim mollitia sint. Voluptas esse nam, alias sit cupiditate ex officia corrupti temporibus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque soluta iusto fugit laudantium atque magni eligendi blanditiis aliquam, voluptatum impedit inventore, sequi natus ratione vel asperiores, qui voluptas nemo? Est.</p>
-            </div>
-            
-          </div>
-
-        </section>
-        <!--TESTIMONIALS-->
-        <section class="testimonials my-section container-fluid">
-          <div class="row">
-            <div class="col-12 col-md-6 m-0 p-0">
-              <h1 class="w-100 title-section">Testimonials</h1>
-              <h2 class="title">What do our customers say</h2>
-              <p>
-                For us it is very important to know the opinions of our clients, since they inspire us to do things better every day. Give us your opinion about our services and let's improve together more and more
-              </p>
-              <div class="d-none d-md-flex justify-content-start">
-                <a target="_blank" href="https://business.google.com" class="btn-primary">VIEW MORE</a>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-6 d-flex align-items-center justify-content-md-end justify-content-center">
-              <div class="grid-carousel">      
-                <div class="owl-carousel owl-theme">
-                  <div class="item-test">
-                    <div class="video-container position-relative">
-                      <div class="name">Maria Smith</div>
-                      <video class="video-testimonial"  src="assets/review-1.mp4"></video>
-                        <button class="playBtn"></button>
-                    </div>
-                  </div>
-                  <div class="item-test">
-                    <div class="video-container position-relative">
-                      <div class="name">Anna Maria</div> 
-                        <video class="video-testimonial"  src="assets/review-2.mp4"></video>
-                        <button class="playBtn"></button>
-                    </div>
-                  </div>
-
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-md-end justify-content-center">
+          <div class="grid-carousel">
+            <div class="owl-carousel owl-theme">
+              <div class="item-test">
+                <div class="video-container position-relative">
+                  <div class="name">Maria Smith</div>
+                  <video class="video-testimonial" src="assets/review-1.mp4"></video>
+                  <button class="playBtn"></button>
                 </div>
-                
               </div>
-            </div>
-            
-          </div>
-          <div class="d-flex d-md-none justify-content-center">
-            <a target="_blank" href="https://business.google.com/" class="btn-primary">VIEW MORE</a>
-          </div>
-        </section>
-      </main>
- 
-              
-      <!--FOOTER-->
-      <footer class="my-section d-flex justify-content-center align-items-end flex-wrap m-0 p-0 bg-footer text-white">
-        <div class="container-footer-data">
-            <div class="container-logo-footer ">
-            <div class="logo-down">
-              <div class="my-logo"> </div>
-            </div>
-            <div class="icons container-social-footer">
-                
-                
-                    <a href="https://www.facebook.com" target="_blank">
-                      <i class="bx bxl-facebook-circle"></i>
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank">
-                      <i class="bx bxl-instagram"></i>
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank">
-                      <i class="bx bxl-youtube"></i>
-                    </a>
-
-        
-            </div>
-            </div>
-        
-            <div id="more-information" class="container-more-footer">
-                  <div class="container-menu-footer">
-                      <h2>More Information</h2>
-                      <ul>
-                          <li>
-                            <i class="bx bxs-map"></i>
-                            <a target="_blank" href="https://www.google.com/maps">   
-                              5191 Eastside Hwy Stevensville, MT 59870
-                            </a>
-                          </li>
-                          <li>
-                            <i class="bx bxs-envelope"></i>
-                            <a target="_blank" href="mailto:info@glamping.global">   
-                              info@glamping.global
-                            </a>
-                          </li>
-                          <li>
-                            <i class="bx bxs-phone"></i>
-                            <a target="_blank" href="tel:1844WEGLAMP">   
-                              Tel: 1-844-WEGLAMP
-                            </a>
-                          </li>
-                          
-                    
-                      </ul>
-                  </div>
-            </div> 
-            
-            <div class="container-quick-links">
-              <div class="container-menu-footer">
-                  <h2>Quick Links</h2>
-                
-                  <ul class="quick-links">
-                    
-                      
-                          <li>
-                            <a href="/about.html">
-                              About Us
-                            </a>
-                          </li>
-                          <li>
-                            <a href="./categories.html">
-                              Shop By Category
-                            </a>
-                          </li>
-                          <li>
-                            <a href="./services.html">
-                              Services
-                            </a>
-                          </li>
-                          <li>
-                            <a href="./contact.html">
-                              Contact Us
-                            </a>
-                          </li>
-                  
-                  </ul>
-                
+              <div class="item-test">
+                <div class="video-container position-relative">
+                  <div class="name">Anna Maria</div>
+                  <video class="video-testimonial" src="assets/review-2.mp4"></video>
+                  <button class="playBtn"></button>
+                </div>
               </div>
 
+            </div>
+
           </div>
-        
         </div>
-        <div class="down d-flex justify-content-around align-items-center ">
-            <span>Copyright © 2022 All rights reserved | This Website Was Designed And Developed by</span>
-            <a href="https://josesilvera.com/" target="_blank"> <img class="logoSilvera"
-            src="assets/silvera.png"></a>
+
+      </div>
+      <div class="d-flex d-md-none justify-content-center">
+        <a target="_blank" href="https://business.google.com/" class="btn-primary">VIEW MORE</a>
+      </div>
+    </section>
+  </main>
+
+
+  <!--FOOTER-->
+  <footer class="my-section container-fluid m-0 p-0 d-flex flex-wrap bg-footer text-white">
+    <div class="row w-100 py-5 m-0">
+      <div class="col-md-4 col-12 ">
+        <div class="row justify-content-center">
+          <div class="my-logo"> </div>
         </div>
-      </footer>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-      <script src="./assets/js/owl.carousel.min.js"> </script> 
-      <script src="./assets/js/main.js"> </script>
-      <script>
-          $(document).ready(function(){
-            let playButtons = document.querySelectorAll(".playBtn");
-            playButtons.forEach(element => {
-                let videoElem = element.parentNode.querySelector(".video-testimonial");
-                
-                element.addEventListener("click", ()=>{
-                handlePlayButton(element, videoElem);
-                }, false);
-                videoElem.onended = ()=>{
-                element.style.display = "block";
-                videoElem.controls = false;
-                $(".testimonials .owl-carousel").trigger('next.owl.carousel');
-                }
-                playVideo(element, videoElem);
-            });
-            
+        <div class="row justify-content-center">
+          <a class="px-2" href="https://www.facebook.com" target="_blank">
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+          <a class="px-2" href="https://www.instagram.com" target="_blank">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a class="px-2" href="https://www.youtube.com" target="_blank">
+            <i class="bx bxl-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3 col-12 container-quick-links d-md-block d-flex justify-content-center">
+        <div class="container-menu-footer pt-3">
+          <h2 class="text-md-left text-center">Quick Links</h2>
+          <ul class="quick-links">
+            <li class="d-flex pt-3 justify-content-center justify-content-md-start">
+              <a href="./about.html">
+                About Us
+              </a>
+            </li>
+            <li class="d-flex pt-3 justify-content-center justify-content-md-start">
+              <a href="./menu.html">
+                Menu
+              </a>
+            </li>
+            <li class="d-flex pt-3 justify-content-center justify-content-md-start">
+              <a href="./faq.html">
+                FAQ's
+              </a>
+            </li>
+            <li class="d-flex pt-3 justify-content-center justify-content-md-start">
+              <a href="./contact.html">
+                Contact Us
+              </a>
+            </li>
 
-            async function playVideo(playButton, videoElem) {
-                try {
-                await videoElem.play();  
-                playButton.style.display = "none";      
-                } catch(err) {
-                
-                playButton.style.display = "block";    
-                }
-                
-            }
+          </ul>
 
-            function handlePlayButton(playButton, videoElem) {
-            
-                videoElem.controls = true;
-                if (videoElem.paused) {
-                playVideo(playButton, videoElem);
-                }else{
-                videoElem.pause();
-                console.log(playButton)
-                playButton.style.display = "block";
-                }
-            }
+        </div>
+      </div>
+      <div class="col-md-5 col-12 container-more-footer pt-3 d-md-block d-flex justify-content-center">
+        <div class="container-menu-footer">
+          <h2 class="text-md-left text-center">More Information</h2>
+          <ul class=" ">
+            <li class="d-flex pr-md-5 pt-3 justify-content-center justify-content-md-start ">
+              <i class="bx bxs-map"></i>
+              <a target="_blank" href="https://www.google.com/maps">
+                5191 Eastside Hwy Stevensville, MT 59870
+              </a>
+            </li>
+            <li class="d-flex pr-md-5 pt-3 justify-content-center justify-content-md-start">
+              <i class="bx bxs-envelope"></i>
+              <a target="_blank" href="mailto:info@glamping.global">
+                info@glamping.global
+              </a>
+            </li>
+            <li class="d-flex pr-md-5 pt-3 justify-content-center justify-content-md-start">
+              <i class="bx bxs-phone"></i>
+              <a target="_blank" href="tel:1844WEGLAMP">
+                Tel: 1-844-WEGLAMP
+              </a>
+            </li>
 
-            $('.testimonials .owl-carousel').owlCarousel({
-              loop: false,
-              items:1,
-              margin:50
-            })
-          })
-      </script>
-    </body>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyright row m-0 justify-content-around align-items-center ">
+      <span>Copyright © 2022 All rights reserved | This Website Was Designed And Developed by</span>
+      <a href="https://josesilvera.com/" target="_blank"> <img class="logoSilvera" src="assets/silvera.png"></a>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./assets/js/owl.carousel.min.js"> </script>
+  <script src="./assets/js/main.js"> </script>
+  <script>
+    $(document).ready(function () {
+      let playButtons = document.querySelectorAll(".playBtn");
+      playButtons.forEach(element => {
+        let videoElem = element.parentNode.querySelector(".video-testimonial");
+
+        element.addEventListener("click", () => {
+          handlePlayButton(element, videoElem);
+        }, false);
+        videoElem.onended = () => {
+          element.style.display = "block";
+          videoElem.controls = false;
+          $(".testimonials .owl-carousel").trigger('next.owl.carousel');
+        }
+        playVideo(element, videoElem);
+      });
+
+
+      async function playVideo(playButton, videoElem) {
+        try {
+          await videoElem.play();
+          playButton.style.display = "none";
+        } catch (err) {
+
+          playButton.style.display = "block";
+        }
+
+      }
+
+      function handlePlayButton(playButton, videoElem) {
+
+        videoElem.controls = true;
+        if (videoElem.paused) {
+          playVideo(playButton, videoElem);
+        } else {
+          videoElem.pause();
+          console.log(playButton)
+          playButton.style.display = "block";
+        }
+      }
+
+      $('.testimonials .owl-carousel').owlCarousel({
+        loop: true,
+        items: 1,
+        margin: 50
+      })
+    })
+  </script>
+</body>
+
 </html>

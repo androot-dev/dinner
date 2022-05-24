@@ -1,258 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <link rel="icon" href="favicon.ico"> 
-        <meta name="theme-color" content="#FF9900">
-        <title>DINNER</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link rel="stylesheet" href="/assets/css/owl.carousel.css">
-        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
-        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="./assets/css/index.css">
-        <link rel="stylesheet" href="./assets/css/subpages.css">
-      </head>
-    <body>
-      <!--HEADER-->
-      <div class="modal-menu my-section">
-        <button class="closeMenu bg-danger text-white">
-          <i class="bx bx-x"></i>
-        </button>
-       
-        <nav>
-          <ul>
-            <li><a class="logo-ref" href="./"> <div class="my-logo-mobile-menu"> </div> </a></li>
-            <li><a class="btn-primary" href="./about.html">About Us</a></li>
-            <li><a class="btn-primary" href="./menu.html">Menu</a></li>
-            <li><a class="btn-primary" href="./faq.html">FAQ's</a></li>
-            <li><a class="btn-primary" href="./contact.html">Contact Us</a></li>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="favicon.ico">
+  <meta name="theme-color" content="#FF9900">
+  <title>DINNER</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">-->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/subpages.css">
+</head>
+
+<body>
+  <!--HEADER-->
+  <div class="modal-menu my-section">
+    <button class="closeMenu bg-danger text-white">
+      <i class="bx bx-x"></i>
+    </button>
+
+    <nav>
+      <ul>
+        <li><a role="button" class="logo-ref" href="./">
+            <div class="my-logo-mobile-menu"> </div>
+          </a></li>
+        <li><a role="button" class="btn-primary" href="./about.html">About Us</a></li>
+        <li><a role="button" class="btn-primary" href="./menu.html">Menu</a></li>
+        <li><a role="button" class="btn-primary" href="./faq.html">FAQ's</a></li>
+        <li><a role="button" class="btn-primary" href="./contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  <header class="my-section ">
+    <div class="topheader position-fixed">
+      <a href="./">
+        <div class="logo-top"></div>
+      </a>
+      <nav>
+        <ul class="text-menu d-none d-md-flex">
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./faq.html">FAQ's</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+        <ul class="icon-menu">
+          <li class="px-1 px-md-none d-block d-md-none phone-menu"><i class="bx bx-menu"></i></li>
+          <li class="d-none d-md-block"><a href="mailto:info@glamping.global"><i class="bx bxs-envelope"></i></a></li>
+          <li class="d-none d-md-block"><a target="_blank" href="https://www.google.com/maps/"><i
+                class="bx bxs-map"></i></a></li>
+          <li class="d-none d-md-block"><a href="tel:5555555"><i class="bx bxs-phone"></i></a></li>
+          <li class="line-menu"></li>
+          <li><a href="#"><i class='bx bx-search-alt'></i></a></li>
+          <li><a href="#"><i class="bx bx-cart"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!--LOADER-->
+  <div class="container-loader">
+    <div class="loader lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <!--HERO-->
+  <section class="my-section hero ">
+    <video autoplay="autoplay" class="video-background" loop="loop" muted playsinline="playsinline"
+      src="assets/videoHero.mp4"></video>
+    <div class="hero-action">
+      <div class="text">
+        <h1 class="first-text">FAQ</h1>
+      </div>
+    </div>
+    <div class="social-bar">
+      <h2 class="large-text">DELICIOUS FOOD</h2>
+      <ul>
+        <li><a target="_blank" href="https://www.facebook.com">Facebook</a></li>
+        <li><a target="_blank" href="https://www.twitter.com">Twitter</a></li>
+        <li><a target="_blank" href="https://www.instagram.com">Instagram</a></li>
+        <li><a target="_blank" href="https://www.youtube.com">Youtube</a></li>
+        <li><a target="_blank" href="https://www.linkedin.com">Linkedin</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <main>
+    <!--FAQ-->
+    </section>
+    <section class=" p-sm-5 p-2 m-0 faq my-section menu-food container-fluid position-relative overlay-med-left">
+      <h3 class="text-center title-section">FAQ</h3>
+      <h1 class="text-center title px-5 mb-3">
+        Frequent questions
+      </h1>
+
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                <i class=" bx bxs-down-arrow pr-3"></i> Lorem Ipsum is simply dummy text id ae?
+              </a>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body text-primary color-secondary">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="  bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simply dummy text id ae?
+              </a>
+            </h5>
+          </div>
+
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body text-primary color-secondary">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="true" aria-controls="collapseThree">
+                <i class="  bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simply dummy text id ae?
+              </a>
+            </h5>
+          </div>
+
+          <div id="collapseThree" class="collapse" aria-labelledby="collapseThree" data-parent="#accordion">
+            <div class="card-body text-primary color-secondary">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapse4"
+                aria-expanded="true" aria-controls="collapse4">
+                <i class=" bx bxs-down-arrow pr-3"></i> Lorem Ipsum is simply dummy text id ae?
+              </a>
+            </h5>
+          </div>
+
+          <div id="collapse4" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body text-primary color-secondary">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapse5"
+                aria-expanded="true" aria-controls="collapse5">
+                <i class="bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simply dummy text id ae?
+              </a>
+            </h5>
+          </div>
+
+          <div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body text-primary color-secondary">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapse6"
+                aria-expanded="true" aria-controls="collapse6">
+                <i class="  bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simply dummy text id ae?
+              </a>
+            </h5>
+          </div>
+
+          <div id="collapse6" class="collapse" aria-labelledby="collapse6" data-parent="#accordion">
+            <div class="card-body text-primary color-secondary">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+              moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+              Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+              shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+              proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+              aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--SUBSCRIBE-->
+    <section class="my-section subscribe position-relative" style="background-image:url(assets/Subscribe.jpg)">
+      <div class="container-fluid m-0 h-100">
+        <div class="row h-100  justify-content-center align-items-center">
+          <div class="container-subscribe d-flex justify-content-center align-items-center flex-wrap w-75">
+            <div class="w-100">
+              <h1 class="w-100 title-section text-white">Subscribe To Newsletter</h1>
+              <h2 class="title color-secondary">Meet our Promotions</h2>
+            </div>
+            <form class="subscribe-form d-flex w-100">
+              <input type="email" required name="email" id="email" class="w-100 input-primary form-control">
+              <button type="submit" class="ml-4 btn-primary">SUBSCRIBE</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!--FOOTER-->
+  <footer class="my-section container-fluid m-0 p-0 d-flex flex-wrap bg-footer text-white">
+    <div class="row w-100 py-5 m-0">
+      <div class="col-md-4 col-12 ">
+        <div class="row justify-content-center">
+          <div class="my-logo"> </div>
+        </div>
+        <div class="row justify-content-center">
+          <a class="px-2" href="https://www.facebook.com" target="_blank">
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+          <a class="px-2" href="https://www.instagram.com" target="_blank">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a class="px-2" href="https://www.youtube.com" target="_blank">
+            <i class="bx bxl-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3 col-12 container-quick-links d-md-block d-flex justify-content-center">
+        <div class="container-menu-footer pt-3">
+          <h2 class="text-md-left text-center">Quick Links</h2>
+          <ul class="quick-links">
+            <li class="d-flex pt-3 justify-content-center justify-content-md-start">
+              <a href="./about.html">
+                About Us
+              </a>
+            </li>
+            <li class="d-flex pt-3 justify-content-center justify-content-md-start">
+              <a href="./menu.html">
+                Menu
+              </a>
+            </li>
+            <li class="d-flex pt-3 justify-content-center justify-content-md-start">
+              <a href="./faq.html">
+                FAQ's
+              </a>
+            </li>
+            <li class="d-flex pt-3 justify-content-center justify-content-md-start">
+              <a href="./contact.html">
+                Contact Us
+              </a>
+            </li>
+
           </ul>
-        </nav>
+
+        </div>
       </div>
-      <header class="my-section ">
-        <div class="topheader  position-fixed">
-          <a href="./"><div class="logo-top"></div></a>
-          
-          
-          <nav >
-            <ul class="text-menu tablets-hide">
-              <li><a href="./about.html">About Us</a></li>
-              <li><a href="./menu.html">Menu</a></li>
-              <li><a href="./faq.html">FAQ's</a></li>
-              <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
-            <ul class="icon-menu ">
-              <li class="phone-menu"><i class="bx bx-menu"></i></li>
-              <li class="tablets-hide"><a href="mailto:info@glamping.global"><i class="bx bxs-envelope"></i></a></li>
-              <li class="tablets-hide"><a href="https://www.google.com/maps/"><i class="bx bxs-map"></i></a></li>
-              <li class="tablets-hide"><a href="tel:5555555"><i class="bx bxs-phone"></i></a></li>  
-              <li class="line-menu"></li> 
-              <li><a href="#"><i class='bx bx-search-alt'></i></a></li>
-              <li><a href="#"><i class="bx bx-cart"></i></a></li>
+      <div class="col-md-5 col-12 container-more-footer pt-3 d-md-block d-flex justify-content-center">
+        <div class="container-menu-footer">
+          <h2 class="text-md-left text-center">More Information</h2>
+          <ul class=" ">
+            <li class="d-flex pr-md-5 pt-3 justify-content-center justify-content-md-start ">
+              <i class="bx bxs-map"></i>
+              <a target="_blank" href="https://www.google.com/maps">
+                5191 Eastside Hwy Stevensville, MT 59870
+              </a>
+            </li>
+            <li class="d-flex pr-md-5 pt-3 justify-content-center justify-content-md-start">
+              <i class="bx bxs-envelope"></i>
+              <a target="_blank" href="mailto:info@glamping.global">
+                info@glamping.global
+              </a>
+            </li>
+            <li class="d-flex pr-md-5 pt-3 justify-content-center justify-content-md-start">
+              <i class="bx bxs-phone"></i>
+              <a target="_blank" href="tel:1844WEGLAMP">
+                Tel: 1-844-WEGLAMP
+              </a>
+            </li>
 
-            </ul>
-          </nav>
-          
+
+          </ul>
         </div>
-      </header>
-
-      <!--LOADER-->
-      <div class="container-loader">
-        <div class="loader lds-ellipsis"><div></div><div></div><div></div><div></div></div>
       </div>
-      
-      <!--HERO-->
-      <section class="my-section hero ">
-        <video autoplay="autoplay" class="video-background" loop="loop" muted playsinline="playsinline" src="assets/videoHero.mp4"></video>
-        <div class="hero-action">
-          <div class="text">
-            <h1 class="first-text">FAQ</h1>
-          </div>
-        </div>
-        <div class="social-bar">
-            <h2 class="large-text">DELICIOUS FOOD</h2>
-            <ul>
-              <li><a  target="_blank" href="https://www.facebook.com">Facebook</a></li>
-              <li><a  target="_blank" href="https://www.twitter.com">Twitter</a></li>
-              <li><a target="_blank"  href="https://www.instagram.com">Instagram</a></li>
-              <li><a target="_blank"  href="https://www.youtube.com">Youtube</a></li>
-              <li><a  target="_blank" href="https://www.linkedin.com">Linkedin</a></li>
-            </ul>
-          </div>
-      </section>
+    </div>
+    <div class="copyright row m-0 justify-content-around align-items-center ">
+      <span>Copyright © 2022 All rights reserved | This Website Was Designed And Developed by</span>
+      <a href="https://josesilvera.com/" target="_blank"> <img class="logoSilvera" src="assets/silvera.png"></a>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!--<script src="./assets/js/owl.carousel.min.js"> </script>-->
+  <script src="./assets/js/main.js"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    crossorigin="anonymous"></script>
+  <script>
+    $('.collapse').on('hidden.bs.collapse', function (evt) {
+      let i = evt.currentTarget.parentNode.querySelector('i');
+      i.style.transform = "scaleY(1)";
 
-      <main>
-        <!--FAQ-->
-        <section class=" my-section menu-food container-fluid position-relative p-5 overlay-med-left">
-          <h3 class="text-center title-section">FAQ</h3>
-          <h1 class="text-center title px-5 mb-5">
-            Frequent questions
-          </h1>
-        
-          <div class="row">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary color-primary"><i class="text-primary-large color-primary bx bxs-home"></i> Lorem ipsum?</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero eaque aspernatur incidunt i ias lorem?Lorem ipsum dol.
-              </p>
-            </div>
-        
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary color-primary"><i class="text-primary-large color-primary bx bxs-phone"></i> Lorem ipsum?</h6>
-              <p>
-                Lorem,igendi Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque aurovident ad deserunt porro facere, tempora officia alias aliquam molestiae. Rem, amet sint! aspernatur incidunt i ias lorem?Lorem ipsum dol.
-              </p>
-            </div>
-        
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary color-primary"><i class="text-primary-large color-primary bx bxs-home"></i> Lorem ipsum?</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero eaque aspernatur incidunt i ias lorem?Lorem ipsum dol.
-              </p>
-            </div>
-        
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary color-primary"><i class="text-primary-large color-primary bx bxs-circle"></i> Lorem ipsum?</h6>
-              <p>
-                Lorem,igendi Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque aurovident ad deserunt porro facere, tempora officia alias aliquam molestiae. Rem, amet sint! aspernatur incidunt i ias lorem?Lorem ipsum dol.
-              </p>
-            </div>
-        
-        
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary color-primary"><i class="text-primary-large color-primary bx bxs-home"></i> Lorem ipsum?</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero eaque aspernatur incidunt i ias lorem?Lorem ipsum dol.
-              </p>
-            </div>
+    })
+    $('.collapse').on('shown.bs.collapse', function (evt) {
 
-            <div class="col-md-6 col-lg-4 mb-4">
-              <h6 class="mb-3 text-primary-small color-primary"><i class="text-primary-large color-primary bx bxs-tv"></i> Lorem ipsum?</h6>
-              <p>
-                Lorem,igendi Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque aurovident ad deserunt porro facere, tempora officia alias aliquam molestiae. Rem, amet sint! aspernatur incidunt i ias lorem?Lorem ipsum dol.
-              </p>
-            </div>
-        </section>
-          <!--SUBSCRIBE-->
-          <section class="my-section subscribe position-relative" style="background-image:url(assets/Subscribe.jpg)">
-            <div class="container-fluid m-0 h-100">
-              <div class="row h-100  justify-content-center align-items-center">
-                <div class="container-subscribe d-flex justify-content-center align-items-center flex-wrap w-75">
-                  <div class="w-100">
-                    <h1 class="w-100 title-section text-white">Subscribe To Newsletter</h1>
-                    <h2 class="title color-secondary">Meet our Promotions</h2>
-                  </div>
-                  <form class="subscribe-form d-flex w-100">
-                    <input type="email" required name="email" id="email" class="w-100 input-primary form-control"> 
-                    <button type="submit" class="ml-4 btn-primary">SUBSCRIBE</button>
-                  </form>
-                </div>
-                
-              </div>
-            </div>
-          </section>
-      </main>
- 
-              
-      <!--FOOTER-->
-      <footer class="my-section d-flex justify-content-center align-items-end flex-wrap m-0 p-0 bg-footer text-white">
-        <div class="container-footer-data">
-            <div class="container-logo-footer ">
-            <div class="logo-down">
-              <div class="my-logo"> </div>
-            </div>
-            <div class="icons container-social-footer">
-                
-                
-                    <a href="https://www.facebook.com" target="_blank">
-                      <i class="bx bxl-facebook-circle"></i>
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank">
-                      <i class="bx bxl-instagram"></i>
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank">
-                      <i class="bx bxl-youtube"></i>
-                    </a>
+      let i = evt.currentTarget.parentNode.querySelector('i');
+      i.style.transform = "scaleY(-1)";
+    })
 
-        
-            </div>
-            </div>
-        
-            <div id="more-information" class="container-more-footer">
-                  <div class="container-menu-footer">
-                      <h2>More Information</h2>
-                      <ul>
-                          <li>
-                            <i class="bx bxs-map"></i>
-                            <a target="_blank" href="https://www.google.com/maps">   
-                              5191 Eastside Hwy Stevensville, MT 59870
-                            </a>
-                          </li>
-                          <li>
-                            <i class="bx bxs-envelope"></i>
-                            <a target="_blank" href="mailto:info@glamping.global">   
-                              info@glamping.global
-                            </a>
-                          </li>
-                          <li>
-                            <i class="bx bxs-phone"></i>
-                            <a target="_blank" href="tel:1844WEGLAMP">   
-                              Tel: 1-844-WEGLAMP
-                            </a>
-                          </li>
-                          
-                    
-                      </ul>
-                  </div>
-            </div> 
-            
-            <div class="container-quick-links">
-              <div class="container-menu-footer">
-                  <h2>Quick Links</h2>
-                
-                  <ul class="quick-links">
-                    
-                      
-                          <li>
-                            <a href="/about.html">
-                              About Us
-                            </a>
-                          </li>
-                          <li>
-                            <a href="./categories.html">
-                              Shop By Category
-                            </a>
-                          </li>
-                          <li>
-                            <a href="./services.html">
-                              Services
-                            </a>
-                          </li>
-                          <li>
-                            <a href="./contact.html">
-                              Contact Us
-                            </a>
-                          </li>
-                  
-                  </ul>
-                
-              </div>
 
-          </div>
-        
-        </div>
-        <div class="down d-flex justify-content-around align-items-center ">
-            <span>Copyright © 2022 All rights reserved | This Website Was Designed And Developed by</span>
-            <a href="https://josesilvera.com/" target="_blank"> <img class="logoSilvera"
-            src="assets/silvera.png"></a>
-        </div>
-      </footer>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-      <script src="./assets/js/owl.carousel.min.js"> </script> 
-      <script src="./assets/js/main.js"> </script>
-    </body>
+  </script>
+</body>
+
 </html>

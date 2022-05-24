@@ -287,16 +287,7 @@ header{
                     width: 1px;
                     background-color: white;
                 }
-                .phone-menu{
-                    display: none;
-                }
-                
-                @include tablets{
-                    .phone-menu{
-                        display:flex;
-                        padding:0 8px;
-                    }                 
-                }    
+                 
             }
             .icon-menu{
                 width: $menu-icon-width;
@@ -354,8 +345,12 @@ header{
 .best-sellers{
     padding-top: $section-separation;
     height: auto;
-    .owl-carousel{
-        
+
+    padding-bottom: 30px;
+    @include tablets{
+        padding-bottom: 0px;
+    }
+    .owl-carousel{  
         position: relative;
         .owl-dots{
             position: absolute;
@@ -365,19 +360,20 @@ header{
     }
     .title-section{
         @include line{
-            width: 50%;
+            width: 41%;
             left: -45%;
-            bottom: 0px;
+            bottom: 20px;
             @include phones{
-                width: 80%;
+                width: 60%;
             }
         }
     }
     .btn-primary{
         max-width: 254px;
-        margin-top: $section-separation;
+        @include tablets{
+            margin-top: $section-separation;
+        }
     }
-
     .description{
         padding-bottom: 30px;
         justify-content: space-between;
@@ -456,12 +452,13 @@ header{
 
     .title-section{
         @include line{
-            bottom: 0;
-            left: -55%;
+            bottom: 20px;
+            left: -60%;
             z-index: 5;
-            width: 50%;
+            width: 55%;
             @include phones{
                 left: -20%;
+                width: 30%;
             }
         }
     }
@@ -497,7 +494,7 @@ header{
         position: relative;
         .img-background{
             background: $primary-dark;
-            height: 90%;
+            height: 95%;
             width: 95%;
             position: absolute;
             right: -3%;
@@ -654,9 +651,13 @@ header{
         @include line{
             width: 60%;
             left: -45%;
-            bottom: 0px;
+            bottom: 22px;
+            @include tablets{
+                left: -20%;
+                width: 25%;
+            }
             @include phones{
-                width: 80%;
+                width: 37%;
             }
         }
    }
@@ -744,6 +745,10 @@ header{
     padding-bottom: $section-separation;
     background-position: top right;
     background-size:cover;
+    .btn-primary{
+        height: 45px;
+        font-size: 0.6em !important;
+    }
     .title, .title-section{
         margin-left: -15px;
     }
@@ -783,9 +788,14 @@ header{
 
 footer {
     margin-top: 100px;
-    min-height: 420px;
     font-family: "Kanit";
-  }
+}
+footer li{
+    
+    @include tablets{
+        text-align: center;
+    }
+}
   .my-logo{
     width:100px;
     height:100px;
@@ -793,10 +803,6 @@ footer {
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  footer *{
-    margin:0;
-    padding:0;
   }
   footer a {
     display: flex;
@@ -808,7 +814,7 @@ footer {
   footer a:hover {
     color: $primary;
   }
-  footer .down {
+  footer .copyright {
     background-color: black;
     align-self: flex-end;
     width: 100%;
@@ -819,7 +825,7 @@ footer {
     justify-content: center;
     padding: 15px;
   }
-  footer .down span {
+  footer .copyright span {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -829,45 +835,24 @@ footer {
     font-size: $text-small;
   }
   @media (max-width: 576px) {
-    footer .down span {
+    footer .copyright span {
       text-align: center;
       padding: 5px;
     }
   }
   @media (max-width: 576px) {
-    footer .down {
+    footer .copyright {
       flex-wrap: wrap;
     }
   }
   footer h2 {
     font-family: "Poppins-Bold";
     font-size: 0.9em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px 0;  
     color: $primary;
   }
   @media (max-width: 768px) {
-    footer h2{
-     justify-content: center !important;
-     text-align: center !important;
-    }
-    .container-quick-links .container-menu-footer{
-      padding-right: 0 !important;
-    }
-    footer li{
-      justify-content: center !important;
-    }
     footer a{
      word-break: break-all;
-     text-align: center;
-     max-width: 200px;
-    }
-    footer i{
-      margin-right: 4px !important;
     }
   }
   footer i{
@@ -875,32 +860,7 @@ footer {
     margin-right: 8px;
   }
   footer li{
-    margin-top: 20px;
-    display:flex;
-    //align-items:center;
     font-size: $text-small;
-  }
- 
-  .container-menu-footer{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-width: 300px;
-    min-width: 300px;
-  }
-  @media (max-width: 768px) {
-    .container-menu-footer{
-     justify-content: center !important;
-    }
-  }
-  .container-footer-data{
-    display:flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    width: 100vw;
-    justify-content: space-around;
-    
   }
   .container-more-footer ul{
     list-style: none;
@@ -913,57 +873,13 @@ footer {
     li{
         align-items: center;
     }
-
   }
-  .container-quick-links .container-menu-footer{
-    max-width: auto !important;
-    min-width: auto !important; 
-  }
-  @media (max-width: 768px) {
-    .container-footer-data{
-      flex-direction:column;
-      justify-content: center;
-    }
-    footer{
-      padding: 10px 0;
-    }
-    .container-quick-links .container-menu-footer{
-      padding-left: 0;
-      padding-right: 9.5vw;
-    }
-    .container-footer-data div{
-      margin: 10px 0;
-  
-    }
-    footer h2{
-      width: 100%;
-      text-align: center;
-      justify-content: flex-start;
-    }
-    .container-menu-footer{
-      max-width: auto !important;
-      min-width: 260px !important;
-      width: auto; 
-      margin: 0 10px;
-      padding: 0 20px;
-    }
-    .container-footer-data{
-      align-items: center;
-    }
-  }
-  .container-social-footer{
-    display:flex;
-    justify-content: center;
-    a{
-        margin: 0 5px;
-    }
-  }
-  footer .logo-down > .my-logo {
+  footer  .my-logo {
     width: $size-logo-footer;
     height: $size-logo-footer;
   }
   @media (max-width: 768px) {
-    footer .logo-down .my-logo {
+    footer .my-logo {
       width: $size-logo-footer-mobile;
       height: $size-logo-footer-mobile;
     }
