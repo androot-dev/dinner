@@ -433,6 +433,7 @@ header{
         z-index: 5;
         color:white;
         @include font("Poppins-Bold", $text-small);
+        box-shadow: 4px 6px 45px -14px rgba(0,0,0,0.75);
     }
     @media screen and (max-width: 860px){
         .col-text{
