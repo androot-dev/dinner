@@ -20,7 +20,7 @@ $section-separation: 50px;
 .contactUs{
     height: auto;
     .form-col{ 
-        background-color: #ffffff;
+        background-color: #f5f4f4;
         font-size: $text-normal;
         //box-shadow: 0 0 10px rgba(214, 215, 216, 0.425);
     }
@@ -56,7 +56,7 @@ $section-separation: 50px;
         form{
             input, select, textarea{
                 @include font("Kanit", $text-small);    
-                background: rgb(236, 236, 236);
+                background: rgb(255, 255, 255);
             }
             .btn-primary{
                 height: 50px;
