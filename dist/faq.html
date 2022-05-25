@@ -98,7 +98,7 @@
   <main>
     <!--FAQ-->
     </section>
-    <section class=" p-sm-5 p-2 m-0 faq my-section menu-food container-fluid position-relative overlay-med-left">
+    <section class=" p-sm-5 p-2 pb-5 m-0 faq my-section menu-food container-fluid position-relative overlay-med-left">
       <h3 class="text-center title-section">FAQ</h3>
       <h1 class="text-center title px-5 mb-3">
         Frequent questions
@@ -110,13 +110,13 @@
             <h5 class="mb-0">
               <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapseOne"
                 aria-expanded="true" aria-controls="collapseOne">
-                <i class=" bx bxs-down-arrow pr-3"></i> Lorem Ipsum is simply dummy text id ae?
+                <i class=" bx bxs-down-arrow pr-3"></i> Lorem sd drr redtra sd Ipsum is simply dummy text id ae?
               </a>
             </h5>
           </div>
 
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body text-primary color-secondary">
+            <div class="card-body text-primary-small color-secondary ">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
               moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
               Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
@@ -131,13 +131,13 @@
             <h5 class="mb-0">
               <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapseTwo"
                 aria-expanded="true" aria-controls="collapseTwo">
-                <i class="  bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simply dummy text id ae?
+                <i class="  bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simply dummy is simply dummy text id ae?
               </a>
             </h5>
           </div>
 
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body text-primary color-secondary">
+            <div class="card-body text-primary-small color-secondary">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
               moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
               Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
@@ -152,13 +152,13 @@
             <h5 class="mb-0">
               <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapseThree"
                 aria-expanded="true" aria-controls="collapseThree">
-                <i class="  bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simply dummy text id ae?
+                <i class="  bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simplyis simply dummy is simply dummy text id ae?
               </a>
             </h5>
           </div>
 
           <div id="collapseThree" class="collapse" aria-labelledby="collapseThree" data-parent="#accordion">
-            <div class="card-body text-primary color-secondary">
+            <div class="card-body text-primary-small color-secondary">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
               moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
               Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
@@ -179,7 +179,7 @@
           </div>
 
           <div id="collapse4" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body text-primary color-secondary">
+            <div class="card-body text-primary-small color-secondary">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
               moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
               Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
@@ -194,13 +194,13 @@
             <h5 class="mb-0">
               <a class="text-primary-normal color-secondary hover_a" data-toggle="collapse" data-target="#collapse5"
                 aria-expanded="true" aria-controls="collapse5">
-                <i class="bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simply dummy text id ae?
+                <i class="bx bxs-down-arrow pr-3"></i>Lorem Ipsum is simply dummy tex vd is simply dummy t id ae?
               </a>
             </h5>
           </div>
 
           <div id="collapse5" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body text-primary color-secondary">
+            <div class="card-body text-primary-small color-secondary">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
               moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
               Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
@@ -221,7 +221,7 @@
           </div>
 
           <div id="collapse6" class="collapse" aria-labelledby="collapse6" data-parent="#accordion">
-            <div class="card-body text-primary color-secondary">
+            <div class="card-body text-primary-small color-secondary">
               Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
               moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
               Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
@@ -345,13 +345,18 @@
   <script>
     $('.collapse').on('hidden.bs.collapse', function (evt) {
       let i = evt.currentTarget.parentNode.querySelector('i');
+      let a = evt.currentTarget.parentNode.querySelector('a');
       i.style.transform = "scaleY(1)";
-
+      a.classList.remove('color-primary');
+      a.classList.add('color-secondary');
     })
     $('.collapse').on('shown.bs.collapse', function (evt) {
 
       let i = evt.currentTarget.parentNode.querySelector('i');
+      let a = evt.currentTarget.parentNode.querySelector('a');
       i.style.transform = "scaleY(-1)";
+      a.classList.remove('color-secondary');
+      a.classList.add('color-primary');
     })
 
 

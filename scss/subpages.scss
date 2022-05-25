@@ -20,15 +20,19 @@ $section-separation: 50px;
 .contactUs{
     height: auto;
     .form-col{ 
-        background: #f3f3f3;
-        border: 1px #e7e7e7 solid;
+        background-color: #ffffff;
+        font-size: $text-normal;
         //box-shadow: 0 0 10px rgba(214, 215, 216, 0.425);
     }
     .info-box{
-        background: #f3f3f3;
-        padding: 25px;
-        border: 1px #e7e7e7 solid;
+      
+        padding: 10px;
+        //border: 1px #e7e7e7 solid;
         //box-shadow: 0 0 30px rgba(214, 215, 216, 0.425);
+        word-wrap: break-word;
+        h3, p, a {
+            word-wrap: break-word;
+        }
     }
     .map{
         height: 550px;
@@ -52,14 +56,16 @@ $section-separation: 50px;
         form{
             input, select, textarea{
                 @include font("Kanit", $text-small);    
-                background: white;
+                background: rgb(236, 236, 236);
             }
             .btn-primary{
-                height: 55px;
+                height: 50px;
+                font-size: 0.7em;
             }
         }
     }
 }
+
 .about-us{
     padding:$section-separation 10%;
     height: auto; 
@@ -133,7 +139,7 @@ $section-separation: 50px;
 }
 .faq{
     i{
-        transition: all 0.3s ease-in-out;
+        transition: all 0.1s ease-in-out;
     }
     
     .card{
@@ -142,8 +148,9 @@ $section-separation: 50px;
         border: none;
     }
     .card-header{
-        background: hsla(0, 0%, 89%, 0.719) !important;
-        margin: 5px;
+        border: 1px solid #e7e7e700;
+        background: hsla(0, 0%, 100%, 0.89) !important;
+        margin: 0px;
         border-radius: 0 !important;
 
         a{
@@ -153,16 +160,111 @@ $section-separation: 50px;
     .card-body, .collapse{
         border-radius: 0 !important;
         background: none;
-        border:none !important;
+       // border:none !important;
         //background-color: $secondary-dark;
-        margin: 0 10px;
+        //margin: 0 10px;
     }
 }
 .menu-food-sub{
+
     .title-section{
+        padding-bottom: $section-separation;
+        padding-top: 30px;
         @include flex(center, nowrap, row, flex-end);
         @include line{
             width: 200px;
+            bottom: 35px;
+        }
+    }
+    .category{
+
+        > .card{
+           @media  screen and (max-width: 390px) {
+                margin-left: 5px !important;
+                margin-right: 5px !important;
+            }
+        }
+        .card-body{
+            min-height: 360px;
+            max-height: 750px;
+            @include tablets{
+               max-height: 672px !important;
+            }
+            @include scrollbar("y", $primary, $secondary-dark, 3px, 0px, $primary);
+        }
+         .card-deck{
+            pointer-events: none;
+            height: auto !important; 
+        }
+        .card-img-overlay{
+            background: rgba(34, 34, 34, 0.521) !important;
+            z-index: 1;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        
+        .tag-price{
+            position: absolute;
+            top:15px;
+            left: 0;
+            height: 35px;
+            padding: 8px 30px;
+            background: $primary;
+            @include flex(center);
+            z-index: 5;
+            color:white;
+            @include font("Poppins-Bold", $text-small);
+        }
+       .header{
+          
+        position: relative;
+
+       }
+       .btn-primary-small{
+        color: white !important;
+        margin-right: 1px;
+        pointer-events: none;
+        i{
+            pointer-events: all;
+        }
+    }
+       .item-food{
+    
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        pointer-events: all;
+        width: 160px !important;
+        min-height: 100px;
+        min-width: 250px;
+        max-width: 250px;
+        margin: 20px;
+        @include phonexs{
+            width: 200px;
+            min-width: 200px;
+            margin: 20px 0 ;
+        }
+        .card-img-top{
+            min-height: 260px;
+            object-fit: cover;
+            max-height: 260px;
+            
+        }
+
+       }
+       .header img{
+           object-fit: cover;
+            object-position: center;
+            height: 250px;
+            min-height: 150px;
+            z-index:1;    
+        }
+        .tag-banner{
+            font-size: 1em;
+            
         }
     }
     @include phones{
@@ -171,24 +273,7 @@ $section-separation: 50px;
     @include phonexs{
         padding: 0 5%;
     }
-    .card{
-        cursor: pointer !important;
-        .card-text{
-            font-size: 1em;
-        }
-        .card-title{
-            font-size: 1.2em;
-        }
-        @include phones{
-           
-            .card-img-top{
-                height: 250px !important;
-                object-fit: cover !important;
-            }
-        }
-        
-    
-    }
+   
 }
 .overlay-med-left{
     position: relative;

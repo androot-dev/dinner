@@ -17,6 +17,7 @@
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./assets/css/index.css">
 
+
 </head>
 
 <body>
@@ -163,7 +164,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="about-img col-sm-5 col-12 p-0 m-0 order-sm-1 order-2">
-            <div class="img-background">
+            <div class="img-background ">
               <img src="assets/ABOUT.jpg" alt="Food">
             </div>
           </div>
@@ -192,41 +193,43 @@
       </div>
     </section>
 
-    <!--FOOD -->
-    <section class="my-section menu-food container-fluid">
+
+
+    <section class="my-section menu-food  container-fluid">
       <div class="row justify-content-center">
         <h1 class="title-section text-center px-4 w-100">Menu</h1>
         <h2 class="title px-5">Meet all our dishes</h2>
       </div>
       <div class="menu-grid row px-sm-5 px-3">
-        <div class="soup banner-image ">
+
+        <a href="./menu.html?category=soup" class="soup banner-image ">
+
           <img src="assets/CATEGORIA 1.jpg">
           <div class="tag-banner w-50">Soup</div>
-        </div>
+        </a>
 
-        <div class="hors banner-image justify-content-end">
+
+
+        <a href="./menu.html?category=hors" class="hors banner-image justify-content-end">
           <img src="assets/CATEGORIA 2.jpg" />
           <div class="tag-banner">hors d'oeuvres</div>
-        </div>
+        </a>
 
-        <div class="desserts banner-image justify-content-center align-items-end">
+        <a href="./menu.html?category=desserts" class="desserts banner-image justify-content-center align-items-end">
           <img src="assets/CATEGORIA 5.jpg" />
           <div class="tag-banner">Desserts</div>
-        </div>
+        </a>
 
-        <div class="desserts banner-image justify-content-center align-items-end">
-          <img src="assets/CATEGORIA 5.jpg" />
-          <div class="tag-banner">Desserts</div>
-        </div>
 
-        <div class="fittings banner-image  align-items-end">
+
+        <a href="./menu.html?category=fittings" class="fittings banner-image  align-items-end">
           <img src="assets/CATEGORIA 3.jpg" />
           <div class="tag-banner">Fittings</div>
-        </div>
-        <div class="gourmet banner-image justify-content-center align-items-end">
+        </a>
+        <a href="./menu.html?category=gourmet" class="gourmet banner-image justify-content-center align-items-end">
           <img src="assets/CATEGORIA 4.jpg" />
           <div class="tag-banner">Gourmet</div>
-        </div>
+        </a>
       </div>
       <div class="col-12 d-flex justify-content-center">
         <a href="./menu.html" role="button" class="btn-primary">MAKE A ORDER</a>
@@ -383,10 +386,12 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
   <script src="./assets/js/owl.carousel.min.js"> </script>
   <script src="./assets/js/main.js"> </script>
   <script>
     $(document).ready(function () {
+
       let playButtons = document.querySelectorAll(".playBtn");
       playButtons.forEach(element => {
         let videoElem = element.parentNode.querySelector(".video-testimonial");

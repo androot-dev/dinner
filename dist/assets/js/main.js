@@ -18,7 +18,9 @@ $(document).ready(function() {
     //let scrollNow = window.pageYOffset;
    
     $(window).on('scroll', function () {
+
         let scroll = $(window).scrollTop();
+        console.log(scroll)
         if (scroll > 100) {
             $(".topheader").addClass("topheader-with-background");
         } else {

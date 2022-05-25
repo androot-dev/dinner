@@ -1,4 +1,5 @@
 @import "_basic.scss";
+
 $primary: #FF9900;
 $primary-light:#f8ad3c;
 $primary-dark:#D88100;
@@ -13,7 +14,7 @@ $gradient-primary: linear-gradient(180deg, #000000 0%, #575757 100%);
 //@include newFont("Poppins-Semibold", "Poppins-Semibold.ttf");
 @include newFont("Poppins-Bold", "Poppins-Bold.ttf");
 
-$text-small: 0.7em;
+$text-small: 0.75em;
 $text-normal: 0.9em;
 $text-medium: 1.2em;
 $text-large: 1.3em;
@@ -67,7 +68,7 @@ $min-height-hero: 690px;
 
   box-sizing: border-box; 
   border: 0.5px $primary solid;
-  @include font("Kanit-Regular", $text-medium);
+ 
   position:relative;
   @include flex(center);
   color:$secondary;
@@ -82,6 +83,7 @@ $min-height-hero: 690px;
     border: 0.5px $primary solid;
     top:calc( 50% - (100% - 4px)/2 );
     left:calc( 50% - (100% - 4px)/2 );
+    pointer-events: none;
 }
 
 }
@@ -473,16 +475,16 @@ p{
         margin: 40px;
         position: absolute;
         width: auto;
-        height: 45px;
+        height: 18px;
         padding:20px 20px;
         background: $primary;
         @include flex(center);
         color: white;
         word-wrap: break-word;
         text-align: center;
-        @include font("Poppins-Bold", $text-medium, 100);
+        @include font("Poppins-Bold", $text-normal, 100);
         @include tablets{
-          font-size: 0.9em;
+          font-size: 0.7em;
 
           margin: 20px;
        }

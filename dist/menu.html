@@ -17,6 +17,7 @@
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="stylesheet" href="./assets/css/subpages.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -64,7 +65,6 @@
     </div>
   </header>
 
-
   <!--LOADER-->
   <div class="container-loader">
     <div class="loader lds-ellipsis">
@@ -98,60 +98,255 @@
 
   <main>
     <!--MENU FOOD-->
-    <section class=" my-section menu-food-sub py-5 menu-categories container-fluid position-relative ">
-      <div class="row justify-content-center">
-        <h1 class="title-section text-center px-4 w-100">Menu</h1>
-        <h2 class="title px-5">Meet all our dishes</h2>
-      </div>
-      <div class="container-fluid flex-wrap">
+    <section class=" px-sm-5 p-0 my-section menu-food-sub py-5 menu-categories container-fluid position-relative ">
 
-        <div class="card-columns">
-          <div class="card text-primary border-menu flex-wrap">
-            <img class="card-img-top" src="./assets/CATEGORIA 1.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-secondary-large color-primary">SOUPS</h5>
-              <p class="card-text ">This is a longer card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <div class="container-fluid  m-0  flex-wrap p-0">
+
+        <!-- soup-->
+        <div id="soup" class="container-fluid category ">
+          <div class="row justify-content-center">
+            <h1 class="title-section text-center px-4 w-100">Soup</h1>
+          </div>
+          <div class="card border-menu mb-5  flex-wrap" data-aos="zoom-in-up">
+            <div class="card-body d-flex justify-content-center flex-wrap justify-content-center">
+
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/PRODUCTO 1.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/soup1.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class="card item-food card position-relative">
+                <img class="card-img-top" src="assets/soup5.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class="card item-food card position-relative">
+                <img class="card-img-top" src="assets/soup2.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class="card item-food card position-relative">
+                <img class="card-img-top" src="assets/soup3.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/soup4.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- hors d'oeuvres -->
+        <div id="hors" class="container-fluid category " data-aos="zoom-in-right">
+          <div class="row justify-content-center">
+            <h1 class="title-section text-center px-4 w-100">Hors d'oeuvres</h1>
+
+          </div>
+          <div class="card border-menu mb-5  flex-wrap">
+            <div class="card-body d-flex justify-content-center flex-wrap justify-content-center">
+
+
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/hors1.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/hors2.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class="card item-food card position-relative">
+                <img class="card-img-top" src="assets/hors3.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/hors4.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/fitting.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+
+              </div>
             </div>
           </div>
-          <div class="card text-primary border-menu flex-wrap">
-            <img class="card-img-top" src="./assets/CATEGORIA 2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-secondary-large color-primary">Hors d'oeuvres</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card text-primary border-menu flex-wrap">
-            <img class="card-img-top" src="./assets/CATEGORIA 3.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-secondary-large color-primary">FITTINGS</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This card has even longer content than the first to show that equal height action.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card text-primary border-menu flex-wrap">
-            <img class="card-img-top" src="./assets/CATEGORIA 5.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-secondary-large color-primary">DESSERTS</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card text-primary border-menu flex-wrap">
-            <img class="card-img-top" src="./assets/CATEGORIA 4.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-secondary-large color-primary">GOURMET</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This card has even longer content than the first to show that equal height action.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
+        </div>
+        <!-- hors d'oeuvres -->
+        <div id="hors" class="container-fluid category " data-aos="zoom-in-right">
+          <div class="row justify-content-center">
+            <h1 class="title-section text-center px-4 w-100">Desserts</h1>
+
           </div>
 
+          <div class="card border-menu mx-5 mb-4   flex-wrap">
+            <div class="card-body d-flex justify-content-center flex-wrap justify-content-center">
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/desserts1.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/desserts2.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class="card item-food card position-relative">
+                <img class="card-img-top" src="assets/desserts3.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <!-- gourmet -->
+        <div id="gourmet" class="container-fluid category " data-aos="zoom-in-right">
+          <div class="row justify-content-center">
+            <h1 class="title-section text-center px-4 w-100">Gourmet</h1>
+
+          </div>
+          <div class="card border-menu mb-5  flex-wrap">
+            <div class="card-body d-flex justify-content-center flex-wrap justify-content-center">
+
+
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/food-2.webp" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/food.jpeg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class="card item-food card position-relative">
+                <img class="card-img-top" src="assets/hors2.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/soup1.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/hors3.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fittings -->
+        <div id="fittings" class="container-fluid category" data-aos="zoom-in-up">
+          <div class="row justify-content-center">
+            <h1 class="title-section text-center px-4 w-100">Fittings</h1>
+
+          </div>
+          <div class="card border-menu mb-5  flex-wrap">
+            <div class="card-body d-flex justify-content-center flex-wrap justify-content-center">
+
+
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/fitting.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class=" card item-food card position-relative">
+                <img class="card-img-top" src="assets/fitting2.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+              <div class="card item-food card position-relative">
+                <img class="card-img-top" src="assets/fitting3.jpg" alt="Food">
+                <div class="tag-price">50$</div>
+                <div class="card-footer  p-0 d-flex justify-content-between">
+                  <span class="name-plate">Gourmet Dish 1</span>
+                  <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -258,10 +453,39 @@
       <a href="https://josesilvera.com/" target="_blank"> <img class="logoSilvera" src="assets/silvera.png"></a>
     </div>
   </footer>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="./assets/js/owl.carousel.min.js"> </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./assets/js/main.js"> </script>
+  <script>
+    AOS.init();
+    function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+    function scroll(id) {
+      let el = $("#" + id);
+
+      $('html, body').animate({
+        scrollTop: el.offset().top - 200
+      }, 300);
+    }
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      window.addEventListener("pageshow", function () {
+        let category = getParameterByName("category");
+        if (category) {
+          scroll(category);
+        }
+      });
+    })
+  </script>
 </body>
 
 </html>
