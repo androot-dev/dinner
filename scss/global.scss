@@ -473,7 +473,8 @@ p{
         }
     }
     .tag-banner{
-        margin: 40px;
+      min-width: 100px;
+        margin: 30px;
         position: absolute;
         width: auto;
         height: 18px;
@@ -483,7 +484,7 @@ p{
         color: white;
         word-wrap: break-word;
         text-align: center;
-        @include font("Poppins-Bold", 0.75em, 100);
+        @include font("Poppins-Bold", 0.76em, 100);
         @include tablets{
           font-size: 0.7em;
 
