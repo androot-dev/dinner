@@ -2,6 +2,10 @@ $subhero-height: 50vh;
 $section-separation: 50px;
 
 @import "global.scss";
+.modal-backdrop {
+    width: 100% ;
+    height: 100%;
+  }
 .hero{
     height: $subhero-height;
     .video-background{
@@ -16,7 +20,6 @@ $section-separation: 50px;
         }
     }
 }
-
 .contactUs{
     height: auto;
     .form-col{ 
@@ -51,6 +54,10 @@ $section-separation: 50px;
             @include line{
                 width: 18%;
                 bottom: 35px;
+                @include phones{
+                    display:none;
+                }
+
             }
         }
         form{
@@ -146,10 +153,11 @@ $section-separation: 50px;
         border-radius: 0 !important;
         background: none;
         border: none;
+        margin-top: 5px;
     }
     .card-header{
         border: 1px solid #e7e7e700;
-        background: hsla(0, 0%, 100%, 0.89) !important;
+        background: hsla(0, 0%, 100%, 0.89);
         margin: 0px;
         border-radius: 0 !important;
 
@@ -165,8 +173,26 @@ $section-separation: 50px;
         //margin: 0 10px;
     }
 }
+.modal{
+    .modal-body{
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }      
+    }
+    .btn-primary{
+        @include phones{
+            width: 70% !important;
+            max-width: 200px ;
+            font-size: 0.65em;
+        }
+        
+    }
+}
 .menu-food-sub{
-
+ 
     .title-section{
         padding-bottom: $section-separation;
         padding-top: 30px;
@@ -174,6 +200,9 @@ $section-separation: 50px;
         @include line{
             width: 200px;
             bottom: 35px;
+            @include phones{
+                display:none;
+            }
         }
     }
     .tag-price{
@@ -266,6 +295,9 @@ $section-separation: 50px;
     }
    
 }
+.breadcrumb-item.active::before {
+    color: #FF9900;
+  }
 .overlay-med-left{
     position: relative;
     &::after{

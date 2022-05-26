@@ -17,10 +17,11 @@
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="stylesheet" href="./assets/css/subpages.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
+
   <!--HEADER-->
   <div class="modal-menu my-section">
     <button class="closeMenu bg-danger text-white">
@@ -81,7 +82,15 @@
       src="assets/videoHero.mp4"></video>
     <div class="hero-action">
       <div class="text">
-        <h1 class="first-text">MENU</h1>
+        <h1 class="p-0 first-text">MENU</h1>
+
+        <nav aria-label="breadcrumb w-100 ">
+          <ol class="breadcrumb bg-transparent text-primary-normal ">
+            <li class="breadcrumb-item"><a href="./">Home</a></li>
+            <li class="breadcrumb-item active  color-primary" aria-current="page">Menu</li>
+          </ol>
+        </nav>
+
       </div>
     </div>
     <div class="social-bar">
@@ -95,190 +104,324 @@
       </ul>
     </div>
   </section>
+  <!--MODAL-->
 
-  <main>
-    <!--MENU FOOD-->
-    <section class=" px-sm-5 p-0 my-section menu-food-sub py-5 menu-categories container-fluid position-relative ">
+  <div class="modal fade" id="modal_product" tabindex="-1" role="dialog" aria-labelledby="modal_product"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header p-2 text-secondary-normal">
+          <h5 class=" modal-title" id="exampleModalLongTitle"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class=" row">
+            <div class="col-sm-8" style="height:200px;">
+              <img class="img-thumbnail img-modal pr-0">
+            </div>
+            <div class="col-sm-4">
+              <ul class="h-75 d-flex align-item-center flex-wrap">
+                <li class="w-100 mt-sm-0 mt-3">
+                  <h5 class="text-center text-secondary-medium price">Price: </h5>
+                </li>
+                <li class="d-none  d-sm-flex w-100 w-50  justify-content-center">
+                  <button class="btn-primary mt-sm-0 mt-2 w-100" style="height:40px ;">Buy Now</button>
+                </li>
+                <li class="w-100 d-none d-sm-flex  justify-content-center">
+                  <button class="btn-primary w-100 mt-sm-0 mt-2" style="height:40px ;">Add to cart</button>
+                </li>
+              </ul>
 
-      <div class="container-fluid  m-0  flex-wrap p-0">
-        <div id="hors" class="container-fluid " data-aos="zoom-in-left">
-          <div class="row justify-content-center">
-            <h1 class="title-section text-center px-4 w-100">Hors d'oeuvres</h1>
+
+            </div>
           </div>
+          <div class=" row">
+            <h5 class="col-12 text-secondary-normal mt-3">Description</h5>
+            <div class="col-sm-12 text-primary-medium color-secondary">
+              <p class="description"></p>
+              <div class="row d-flex d-sm-none justify-content-around">
+                <button class="col-5 btn-primary mt-sm-0 mt-2" style="height:40px ;">Buy Now</button>
+                <button class="col-5 btn-primary mt-sm-0 mt-2" style="height:40px ;">Add to cart</button>
+              </div>
 
-          <div class="owl-carousel owl-theme">
-            <div class="card item-food card position-relative">
-              <img class="card-img-top" src="assets/hors1.jpg" alt="Food">
-              <div class="tag-price">50$</div>
-              <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
-                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
-              </div>
-            </div>
-            <div class="card item-food card position-relative">
-              <img class="card-img-top" src="assets/hors2.jpg" alt="Food">
-              <div class="tag-price">50$</div>
-              <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
-                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
-              </div>
-            </div>
-            <div class="card item-food card position-relative">
-              <img class="card-img-top" src="assets/hors3.jpg" alt="Food">
-              <div class="tag-price">50$</div>
-              <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
-                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
-              </div>
             </div>
 
           </div>
         </div>
+        <div class="modal-footer p-2 text-secondary-normal ">
+          <small class="category-modal "></small>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <div id="desserts" class="container-fluid " data-aos="zoom-in-right">
+  <!--END MODAL-->
+  <main>
+    <!--MENU FOOD-->
+    <section class=" pt-4 my-section menu-food-sub pb-5 px-0 menu-categories container-fluid position-relative ">
+
+      <div class="container-fluid m-0 p-0 flex-wrap  container-menu-items position-relative">
+
+
+
+
+        <div id="hors" class="pb-5 px-sm-5 px-3 container-fluid  ">
+
+          <div class="row justify-content-center">
+            <h1 class="title-section text-center px-4 w-100">Hors d'oeuvres</h1>
+          </div>
+          <div class="owl-carousel owl-theme">
+
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
+              <img class="card-img-top" src="assets/hors1.jpg" alt="Food">
+              <div class="tag-price">50$</div>
+              <div class="card-footer  p-0 d-flex justify-content-between">
+                <span class="name-plate">Hors Dish 1</span>
+                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+              </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
+
+            </div>
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
+              <img class="card-img-top" src="assets/hors2.jpg" alt="Food">
+              <div class="tag-price">150$</div>
+              <div class="card-footer  p-0 d-flex justify-content-between">
+                <span class="name-plate">Hors Dish 2</span>
+                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+              </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptasdfsdfsfte quibusdam sint itaque temporibus ipsum, facere neque
+                exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
+            </div>
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
+              <img class="card-img-top" src="assets/hors3.jpg" alt="Food">
+              <div class="tag-price">150$</div>
+              <div class="card-footer  p-0 d-flex justify-content-between">
+                <span class="name-plate">Hors Dish 3</span>
+                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+              </div>
+              <p class="d-none description">Lorem sfsdfsdfsdfsdfdsf ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
+            </div>
+
+
+
+          </div>
+        </div>
+        <div id="desserts" class="pb-5 px-sm-5 px-3 bg-light container-fluid ">
           <div class="row justify-content-center">
             <h1 class="title-section text-center px-4 w-100">Desserts</h1>
           </div>
 
           <div class="owl-carousel owl-theme">
-            <div class="card item-food card position-relative">
-              <img class="card-img-top" src="assets/desserts3.jpg" alt="Food">
-              <div class="tag-price">50$</div>
-              <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
-                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
-              </div>
-            </div>
-            <div class="card item-food card position-relative">
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
               <img class="card-img-top" src="assets/desserts1.jpg" alt="Food">
-              <div class="tag-price">50$</div>
+              <div class="tag-price">150$</div>
               <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
+                <span class="name-plate">Desserts Dish 3</span>
                 <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
               </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
             </div>
-            <div class="card item-food card position-relative">
+
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
               <img class="card-img-top" src="assets/desserts2.jpg" alt="Food">
               <div class="tag-price">50$</div>
               <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
+                <span class="name-plate">Desserts Dish 2</span>
                 <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
               </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
+            </div>
+
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
+              <img class="card-img-top" src="assets/desserts3.jpg" alt="Food">
+              <div class="tag-price">50$</div>
+              <div class="card-footer  p-0 d-flex justify-content-between">
+                <span class="name-plate">Desserts Dish 3</span>
+                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+              </div>
+              <p class="d-none description">Lor asdasdasdem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis laboreasdad
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
             </div>
 
           </div>
 
 
         </div>
-
-        <div id="soup" class="container-fluid " data-aos="zoom-in-up">
+        <div id="soup" class="pb-5 px-sm-5 px-3  container-fluid ">
           <div class="row justify-content-center">
             <h1 class="title-section text-center px-4 w-100">Soup</h1>
           </div>
 
           <div class="owl-carousel owl-theme">
-            <div class="card item-food card position-relative">
+
+
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
               <img class="card-img-top" src="assets/soup1.jpg" alt="Food">
-              <div class="tag-price">50$</div>
+              <div class="tag-price">250$</div>
               <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
+                <span class="name-plate">Soup Dish 1</span>
                 <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
               </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
             </div>
-            <div class="card item-food card position-relative">
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
               <img class="card-img-top" src="assets/soup2.jpg" alt="Food">
-              <div class="tag-price">50$</div>
+              <div class="tag-price">250$</div>
               <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
+                <span class="name-plate">Soup Dish 1</span>
                 <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
               </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
             </div>
-            <div class="card item-food card position-relative">
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
               <img class="card-img-top" src="assets/soup3.jpg" alt="Food">
-              <div class="tag-price">50$</div>
+              <div class="tag-price">250$</div>
               <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
+                <span class="name-plate">Soup Dish 1</span>
                 <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
               </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
             </div>
 
           </div>
 
 
         </div>
-
-        <div id="gourmet" class="container-fluid " data-aos="zoom-in-down">
+        <div id="gourmet" class="pb-5 px-sm-5 px-3 bg-light container-fluid ">
           <div class="row justify-content-center">
             <h1 class="title-section text-center px-4 w-100">Gourmet</h1>
           </div>
 
           <div class="owl-carousel owl-theme">
-            <div class="card item-food card position-relative">
-              <img class="card-img-top" src="assets/PRODUCTO 1.jpg" alt="Food">
-              <div class="tag-price">50$</div>
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
+              <img class="card-img-top" src="assets/food-2.webp" alt="Food">
+              <div class="tag-price">350$</div>
               <div class="card-footer  p-0 d-flex justify-content-between">
                 <span class="name-plate">Gourmet Dish 1</span>
                 <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
               </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
             </div>
-            <div class="card item-food card position-relative">
-              <img class="card-img-top" src="assets/PRODUCTO 2.jpg" alt="Food">
-              <div class="tag-price">50$</div>
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
+              <img class="card-img-top" src="assets/soup4.jpg" alt="Food">
+              <div class="tag-price">250$</div>
+              <div class="card-footer  p-0 d-flex justify-content-between">
+                <span class="name-plate">Gouermet Dish 1</span>
+                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+              </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
+            </div>
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
+              <img class="card-img-top" src="assets/hors4.jpg" alt="Food">
+              <div class="tag-price">250$</div>
               <div class="card-footer  p-0 d-flex justify-content-between">
                 <span class="name-plate">Gourmet Dish 1</span>
                 <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
               </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
             </div>
-            <div class="card item-food card position-relative">
-              <img class="card-img-top" src="assets/soup1.jpg" alt="Food">
-              <div class="tag-price">50$</div>
-              <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
-                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
-              </div>
-            </div>
-
           </div>
-
-
         </div>
-
-        <div id="fittings" class="container-fluid " data-aos="zoom-in-right">
+        <div id="fittings" class=" pb-5 px-sm-5 px-3 container-fluid ">
           <div class="row justify-content-center">
             <h1 class="title-section text-center px-4 w-100">Fittings</h1>
           </div>
 
           <div class="owl-carousel owl-theme">
-            <div class="card item-food card position-relative">
-              <img class="card-img-top" src="assets/fitting.jpg" alt="Food">
-              <div class="tag-price">50$</div>
-              <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
-                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
-              </div>
-            </div>
-            <div class="card item-food card position-relative">
-              <img class="card-img-top" src="assets/fitting2.jpg" alt="Food">
-              <div class="tag-price">50$</div>
-              <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
-                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
-              </div>
-            </div>
-            <div class="card item-food card position-relative">
+
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
               <img class="card-img-top" src="assets/fitting3.jpg" alt="Food">
               <div class="tag-price">50$</div>
               <div class="card-footer  p-0 d-flex justify-content-between">
-                <span class="name-plate">Gourmet Dish 1</span>
+                <span class="name-plate">Fitting Dish 1</span>
                 <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
               </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
+            </div>
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
+              <img class="card-img-top" src="assets/fitting2.jpg" alt="Food">
+              <div class="tag-price">50$</div>
+              <div class="card-footer  p-0 d-flex justify-content-between">
+                <span class="name-plate">Fitting Dish 2</span>
+                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+              </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
+            </div>
+            <div class="card item-food card position-relative" data-toggle="modal" data-target="#modal_product">
+              <img class="card-img-top" src="assets/fitting.jpg" alt="Food">
+              <div class="tag-price">50$</div>
+              <div class="card-footer  p-0 d-flex justify-content-between">
+                <span class="name-plate">Fitting Dish 2</span>
+                <a href="#" role="button" class="btn-primary-small"><i class="bx bx-tada-hover bx-cart"></i></a>
+              </div>
+              <p class="d-none description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Expedita adipisci
+                omnis labore
+                hic corporis impedit, voluptate quibusdam sint itaque temporibus ipsum, facere neque exercitationem
+                dignissimos voluptates maxime tempora eius sapiente.</p>
             </div>
 
+
+
+
           </div>
-
-
         </div>
-
+      </div>
     </section>
     <!--SUBSCRIBE-->
     <section class="my-section subscribe position-relative" style="background-image:url(assets/Subscribe.jpg)">
@@ -387,10 +530,12 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="./assets/js/owl.carousel.min.js"> </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+    crossorigin="anonymous"></script>
   <script src="./assets/js/main.js"> </script>
   <script>
-    AOS.init();
+
     function getParameterByName(name) {
       name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
       var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -406,7 +551,7 @@
     }
 
 
-    //sd 
+
     document.addEventListener("DOMContentLoaded", function () {
       window.addEventListener("pageshow", function () {
         let category = getParameterByName("category");
@@ -420,7 +565,7 @@
         margin: 150,
         items: 1,
         autoplay: true,
-        autoplayTimeout: 4000,
+        autoplayTimeout: 3000,
         autoplayHoverPause: true,
         center: true,
         responsive: {
@@ -441,7 +586,7 @@
         margin: 150,
         items: 1,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 4000,
         autoplayHoverPause: true,
         center: true,
         responsive: {
@@ -483,7 +628,7 @@
         margin: 150,
         items: 1,
         autoplay: true,
-        autoplayTimeout: 4000,
+        autoplayTimeout: 3600,
         autoplayHoverPause: true,
         center: true,
         responsive: {
@@ -504,7 +649,7 @@
         margin: 150,
         items: 1,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 4000,
         autoplayHoverPause: true,
         center: true,
         responsive: {
@@ -519,7 +664,28 @@
           }
         }
       })
+
+
     });
+    $('#modal_product').on('show.bs.modal', function (e) {
+      function quitarSaltosDeLinea(str) {
+        return str.replace(/(\r\n|\n|\r)/gm, "");
+      }
+      let el = e.relatedTarget;
+      let description = el.querySelector("p").textContent;
+      let name = el.querySelector(".name-plate").textContent;
+      let price = el.querySelector(".tag-price").textContent;
+      let category = el.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector(".title-section").textContent;
+      let img = el.querySelector(".card-img-top").src;
+      let modal = e.currentTarget;
+      modal.querySelector(".modal-title").textContent = quitarSaltosDeLinea(name);
+      modal.querySelector(".modal-body .description").textContent = quitarSaltosDeLinea(description);
+      modal.querySelector(".modal-body .price").textContent = "Price: " + quitarSaltosDeLinea(price);
+      modal.querySelector(".modal-footer .category-modal").textContent = quitarSaltosDeLinea(category);
+      modal.querySelector(".modal-body .img-modal").src = img;
+      modal.querySelector(".modal-body .img-modal").alt = name;
+
+    })
 
   </script>
 </body>
