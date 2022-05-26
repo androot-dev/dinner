@@ -350,23 +350,25 @@
     crossorigin="anonymous"></script>
   <script>
     $('.collapse').on('hidden.bs.collapse', function (evt) {
+      let header = evt.currentTarget.parentNode.querySelector('.card-header');
+
       let i = evt.currentTarget.parentNode.querySelector('i');
       let a = evt.currentTarget.parentNode.querySelector('a');
       i.style.transform = "scaleY(1)";
-      a.classList.remove('color-primary');
-      a.classList.add('color-secondary');
-      let header = evt.currentTarget.parentNode.querySelector('.card-header');
-      header.classList.remove('bg-light');
+      header.classList.remove('bg-primary');
+      header.classList.add('bg-light');
+
 
     })
     $('.collapse').on('shown.bs.collapse', function (evt) {
       let header = evt.currentTarget.parentNode.querySelector('.card-header');
-      header.classList.add('bg-light');
+
       let i = evt.currentTarget.parentNode.querySelector('i');
       let a = evt.currentTarget.parentNode.querySelector('a');
       i.style.transform = "scaleY(-1)";
-      a.classList.remove('color-secondary');
-      a.classList.add('color-primary');
+      header.classList.remove('bg-light');
+      header.classList.add('bg-primary');
+
     })
 
 

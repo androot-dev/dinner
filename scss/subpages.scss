@@ -158,11 +158,15 @@ $section-separation: 50px;
     .card-header{
         border: 1px solid #e7e7e700;
         background: hsla(0, 0%, 100%, 0.89);
+        transition: background-color 0.3s linear;
         margin: 0px;
         border-radius: 0 !important;
 
         a{
             cursor: pointer;
+            &:hover{
+               color:rgb(0, 0, 0) !important;; 
+            }
         }
     }
     .card-body, .collapse{

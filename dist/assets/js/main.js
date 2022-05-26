@@ -1,9 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function(){
     window.addEventListener("pageshow", function () {  
-          
             var loader = document.querySelector('.loader');
-            console.log(loader)
             if (loader) {
               let containerLoader = document.querySelector('.container-loader');
                containerLoader.style.opacity = "0";
@@ -16,11 +14,9 @@ document.addEventListener("DOMContentLoaded", function(){
       })
 $(document).ready(function() {
     //let scrollNow = window.pageYOffset;
-   
     $(window).on('scroll', function () {
 
         let scroll = $(window).scrollTop();
-        console.log(scroll)
         if (scroll > 100) {
             $(".topheader").addClass("topheader-with-background");
         } else {
