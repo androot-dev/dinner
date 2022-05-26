@@ -576,71 +576,28 @@ header{
             width: 200px;
         }
     }
-    .btn-primary{
-        margin-top: $section-separation;
-    }
-    @include phones{
-        padding-top: $section-separation;
-        .banner-image{
-            justify-content: center !important;
-            align-items: flex-end !important;
-        }
-    }
-    .menu-grid{
-
-        height: 90vh;
-        max-height: 1000px;
-        min-height: 650px;      
-        display: grid;
-        grid-template-areas:
-        "soup hors hors"
-        "soup desserts gourmet"
-        "fittings fittings gourmet";
-        grid-gap: 20px;
-
-        @include phones{
-            height: 70vh;
-            min-height: 400px;
-            grid-template-areas: 
-            "soup desserts"
-            "fittings fittings"
-            " gourmet hors";
-           
-            grid-gap: 10px;
-        }
-       
-    }
-    .soup{
-        grid-area: soup;
-    }
-    .hors{
-        grid-area: hors;
-    }
-    .desserts{
-        grid-area: desserts;
-    }
-    .fittings{
-        grid-area: fittings;
-    }
-    .gourmet{
-        grid-area: gourmet;
-    }
     .banner-image{
-       
-        border:none !important;
-        outline: none !important;
-        overflow: hidden;
-        object-fit: cover;
-       
-        img{
-            object-fit: cover;
-            transition: transform 0.3s ease-in-out;
-            width: 100%;
-            height: 100%;
-        }
+       width: 100%;
+       height: 90%;
+       background-color: #000000;
+       border:none !important;
+       outline: none !important;
+       overflow: hidden;
+       object-fit: cover;
+      @include tablets{
+          height: 202px !important;
+      }
+       .image{
+           width: 100%;
+           height: 100%;
+           background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all .3s ease-in-out; 
+       } 
     }
 
-    .banner-image:hover img{
+    .banner-image:hover .image{
         transform: scale(1.2);
     }
 }

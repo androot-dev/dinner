@@ -418,7 +418,8 @@ p{
   background: $primary;
   @include flex(center);
   color: white;
-  @include font("Poppins-Bold", $text-small, 100);
+  @include font("Poppins-Bold", 0.6em, 100);
+  word-wrap: break-word;  
 }
 .item-food{
   border-radius: 0px;
@@ -482,7 +483,7 @@ p{
         color: white;
         word-wrap: break-word;
         text-align: center;
-        @include font("Poppins-Bold", $text-normal, 100);
+        @include font("Poppins-Bold", 0.75em, 100);
         @include tablets{
           font-size: 0.7em;
 
